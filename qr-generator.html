@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تولید QR Code · ansaldoassets</title>
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <div class="logo">
+    <span class="ansaldo">ansaldo</span>
+    <span class="divider"></span>
+    <span class="energia">energia</span>
+  </div>
+
+  <div class="page-card">
+    <h1>تولید QR برای یک کد دارایی</h1>
+    <p>
+      کد دارایی را وارد کنید (مثلاً <code>AEI-IT-026</code>). این ابزار
+      یک QR Code می‌سازد که فقط به آدرس
+      <code>/qr/کد</code> روی همین سایت اشاره می‌کند — قبل از تولید،
+      حتماً همان کد را به فایل اموال (<code>assets.js</code>) هم اضافه کنید
+      تا صفحه‌اش خالی نباشد.
+    </p>
+
+    <label for="code">کد دارایی</label>
+    <input id="code" type="text" placeholder="AEI-IT-026" autocomplete="off">
+
+    <button class="btn" id="generate">ساخت QR Code</button>
+
+    <div id="qr-result" style="display:none;">
+      <div id="qr-canvas"></div>
+      <div id="qr-url"></div>
+      <a id="qr-download" download="qr.png">دانلود تصویر QR</a>
+    </div>
+  </div>
+
+  <div class="page-card" style="margin-top:16px;">
+    <h1>دانلود همه QR کدها یکجا</h1>
+    <p>
+      این گزینه یک فایل ZIP شامل QR Code تمام کدهایی که الان در فایل اموال
+      ثبت شده‌اند می‌سازد (هر فایل با نام همان کد، مثل
+      <code>AEI-IT-001.png</code>) — مناسب برای چاپ یکجای همه‌ی برچسب‌ها.
+    </p>
+    <button class="btn" id="bulk-generate">دانلود ZIP همه‌ی QR کدها</button>
+    <p id="bulk-status" style="margin-top:10px; font-size:12.5px;"></p>
+  </div>
+
+<script>
+  const input = document.getElementById('code');
+  const btn = document.getElementById('generate');
+  const result = document.getElementById('qr-result');
+  const canvasHolder = document.getElementById('qr-canvas');
+  const urlLabel = document.getElementById('qr-url');
+  const downloadLink = document.getElementById('qr-download');
+
+  function generate() {
+    const code = input.value.trim();
+    if (!code) return;
+
+    const url = `${location.origin}/qr/${encodeURIComponent(code)}`;
+    canvasHolder.innerHTML = '';
+
+    new QRCode(canvasHolder, {
+      text: url,
+      width: 220,
+      height: 220,
+      colorDark: '#20242B',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+
+    urlLabel.textContent = url;
+    result.style.display = 'block';
+
+    // wait a tick for the canvas/img to render before wiring the download link
+    setTimeout(() => {
+      const img = canvasHolder.querySelector('img, canvas');
+      if (img && img.toDataURL) {
+        downloadLink.href = img.toDataURL('image/png');
+      } else if (img && img.src) {
+        downloadLink.href = img.src;
+      }
+      downloadLink.download = `qr-${code}.png`;
+    }, 50);
+  }
+
+  btn.addEventListener('click', generate);
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') generate(); });
+
+  // ---- bulk download: all codes as a ZIP of PNGs ----
+  const bulkBtn = document.getElementById('bulk-generate');
+  const bulkStatus = document.getElementById('bulk-status');
+
+  function qrDataUrl(text) {
+    return new Promise((resolve) => {
+      const holder = document.createElement('div');
+      holder.style.display = 'none';
+      document.body.appendChild(holder);
+      new QRCode(holder, {
+        text,
+        width: 400,
+        height: 400,
+        colorDark: '#000000',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
+      });
+      setTimeout(() => {
+        const el = holder.querySelector('img, canvas');
+        const dataUrl = el.toDataURL ? el.toDataURL('image/png') : el.src;
+        document.body.removeChild(holder);
+        resolve(dataUrl);
+      }, 30);
+    });
+  }
+
+  async function bulkGenerate() {
+    bulkBtn.disabled = true;
+    try {
+      const res = await fetch('/asset-codes.json');
+      const list = await res.json();
+      const zip = new JSZip();
+      for (let i = 0; i < list.length; i++) {
+        const { code } = list[i];
+        bulkStatus.textContent = `در حال ساخت ${i + 1} از ${list.length} (${code})`;
+        const url = `${location.origin}/qr/${encodeURIComponent(code)}`;
+        const dataUrl = await qrDataUrl(url);
+        const base64 = dataUrl.split(',')[1];
+        zip.file(`${code}.png`, base64, { base64: true });
+      }
+      bulkStatus.textContent = 'در حال فشرده‌سازی...';
+      const blob = await zip.generateAsync({ type: 'blob' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'ansaldoassets-qr-codes.zip';
+      a.click();
+      bulkStatus.textContent = `${list.length} کد QR ساخته و دانلود شد.`;
+    } catch (err) {
+      bulkStatus.textContent = 'خطا در ساخت فایل. دوباره تلاش کنید.';
+      console.error(err);
+    } finally {
+      bulkBtn.disabled = false;
+    }
+  }
+
+  bulkBtn.addEventListener('click', bulkGenerate);
+</script>
+</body>
+</html>
