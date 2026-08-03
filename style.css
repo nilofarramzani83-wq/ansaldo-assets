@@ -301,3 +301,22 @@ body{
   border-radius: 999px;
   text-decoration:none;
 }
+/* ---------- Asset Image ---------- */
+
+.asset-image{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin:18px 0 22px;
+}
+
+.asset-image img{
+    width:220px;
+    height:220px;
+    object-fit:contain;
+    background:#fff;
+    border:1px solid #ECECEC;
+    border-radius:18px;
+    padding:12px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
