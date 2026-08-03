@@ -121,7 +121,9 @@
     try {
     const res = await fetch('/_data/assets.js');
 const text = await res.text();
-
+      
+console.log(text.slice(0,500));
+      
 const matches = [...text.matchAll(/['"]([A-Z0-9-]+-TR)['"]/g)];
 
 const list = matches.map(m => ({
