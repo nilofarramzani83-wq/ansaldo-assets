@@ -2198,6 +2198,20 @@ export const assets = {
     status: 'فعال'
   },
 
+  'AEI-ST-076-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-077-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
   'AEI-APP-028-TR': {
     name: 'کنترل کولر',
     location: 'اداری',
