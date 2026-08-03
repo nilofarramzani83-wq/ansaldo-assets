@@ -1824,4 +1824,3 @@ const assets = {
     status: 'فعال'
   },
 };
-
