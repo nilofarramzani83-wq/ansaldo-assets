@@ -94,27 +94,38 @@
   const bulkBtn = document.getElementById('bulk-generate');
   const bulkStatus = document.getElementById('bulk-status');
 
-  function qrDataUrl(text) {
-    return new Promise((resolve) => {
-      const holder = document.createElement('div');
-      holder.style.display = 'none';
-      document.body.appendChild(holder);
-      new QRCode(holder, {
-        text,
-        width: 400,
-        height: 400,
-        colorDark: '#000000',
-        colorLight: '#ffffff',
-        correctLevel: QRCode.CorrectLevel.M
-      });
-      setTimeout(() => {
-        const el = holder.querySelector('img, canvas');
-        const dataUrl = el.toDataURL ? el.toDataURL('image/png') : el.src;
-        document.body.removeChild(holder);
-        resolve(dataUrl);
-      }, 30);
+function qrDataUrl(text) {
+  return new Promise((resolve) => {
+    const holder = document.createElement('div');
+    holder.style.display = 'none';
+    document.body.appendChild(holder);
+
+    new QRCode(holder, {
+      text,
+      width: 400,
+      height: 400,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
     });
-  }
+
+    setTimeout(() => {
+      const canvas = holder.querySelector('canvas');
+      const img = holder.querySelector('img');
+
+      let dataUrl = null;
+
+      if (canvas) {
+        dataUrl = canvas.toDataURL('image/png');
+      } else if (img) {
+        dataUrl = img.src;
+      }
+
+      document.body.removeChild(holder);
+      resolve(dataUrl);
+
+    }, 300);
+  });
 
   async function bulkGenerate() {
     bulkBtn.disabled = true;
