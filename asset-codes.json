@@ -1,1 +1,2382 @@
+export const assets = {
+  'AEI-IT-001-TR': {
+    name: 'لپ‌تاپ',
+    brand: 'HP',
+    model: '-',
+    location: 'مالی',
+    role: 'مدیر مالی',
+    status: 'فعال'
+  },
 
+  'AEI-IT-002-TR': {
+    name: 'لپ‌تاپ',
+    brand: 'ASUS',
+    model: 'R565J',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+  },
+
+  'AEI-IT-003-TR': {
+    name: 'هولدر لپ‌تاپ',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-001-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: 'MOHQUO',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+  },
+
+  'AEI-IT-004-TR': {
+    name: 'کامپیوتر',
+    brand: 'ASUS',
+    model: '2211FH1304',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+  },
+
+  'AEI-IT-005-TR': {
+    name: 'کامپیوتر',
+    brand: 'MSI',
+    model: 'AF83',
+    location: 'مالی',
+    role: 'حسابدار',
+    status: 'فعال'
+  },
+
+  'AEI-IT-006-TR': {
+    name: 'کامپیوتر',
+    brand: 'MSI',
+    model: 'AF83',
+    location: 'مالی',
+    role: 'مسئول حسابداری',
+    status: 'فعال'
+  },
+
+  'AEI-APP-001-TR': {
+    name: 'دستگاه کارت زنی',
+    location: 'اداری',
+    role: 'مسئول دفتر',
+    status: 'فعال'
+  },
+
+  'AEI-IT-007-TR': {
+    name: 'کامپیوتر',
+    brand: 'MSI',
+    model: 'AF83',
+    location: 'اداری',
+    role: 'مسئول دفتر',
+    status: 'فعال'
+  },
+
+  'AEI-IT-008-TR': {
+    name: 'کامپیوتر',
+    brand: 'ASUS',
+    model: 'PA278OV',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-009-TR': {
+    name: 'کامپیوتر',
+    brand: 'MSI',
+    model: 'AF83',
+    location: 'تدارکات',
+    role: 'مسئول تدارکات',
+    status: 'فعال'
+  },
+  'AEI-IT-010-TR': {
+    name: 'هولدر لپ‌تاپ',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-002-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+  },
+
+  'AEI-IT-011-TR': {
+    name: 'لپ‌تاپ',
+    brand: 'HP',
+    model: 'EliteBook',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-012-TR': {
+    name: 'لپ‌تاپ',
+    brand: 'ASUS',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-013-TR': {
+    name: 'آداپتور شارژ لپ تاپ HP',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-014-TR': {
+    name: 'آداپتور شارژ لپ تاپ HP',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-015-TR': {
+    name: 'آداپتور شارژ لپ تاپ HP',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-003-TR': {
+    name: 'کابل برق آداپتور',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-004-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-016-TR': {
+    name: 'کیف لپ‌تاپ',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-IT-017-TR': {
+    name: 'کیف لپ‌تاپ',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-005-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-006-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-007-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+  'AEI-ST-001-TR': {
+    name: 'کیس',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-008-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-001-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-002-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-003-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-009-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-IT-018-TR': {
+    name: 'داکینگ استیشن',
+    brand: 'HP',
+    model: '-',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-010-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-011-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-012-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-013-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-014-TR': {
+    name: 'ماوس ید',
+    brand: 'HP',
+    model: '-',
+    location: 'انبار',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-015-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-016-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-017-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+  'AEI-ST-002-TR': {
+    name: 'پایه چسب نواری',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-018-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-019-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-IT-019-TR': {
+    name: 'کامپیوتر',
+    brand: 'ASUS',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-020-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-021-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-004-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-003-TR': {
+    name: 'سوزن کش',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-022-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-ST-004-TR': {
+    name: 'سوزن کش',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-005-TR': {
+    name: 'سوزن کش',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-006-TR': {
+    name: 'سوزن کش',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-002-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-005-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-007-TR': {
+    name: 'پانچ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-008-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-009-TR': {
+    name: 'پایه چسب نواری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-ST-010-TR': {
+    name: 'جا کارتی ویزیت',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-011-TR': {
+    name: 'جا گیره',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-012-TR': {
+    name: 'سوزن کش',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-023-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-AV-001-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: 'کارمند',
+    status: 'فعال'
+  },
+
+  'AEI-APP-003-TR': {
+    name: 'محافظ برق',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-013-TR': {
+    name: 'ید زیر لپ تاپ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-006-TR': {
+    name: 'قاب روی میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-014-TR': {
+    name: 'کازیه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-015-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-016-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-017-TR': {
+    name: 'جا کارتی ویزیت',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-018-TR': {
+    name: 'ظرف دستمال',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-007-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-008-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-009-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-010-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-FUR-011-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-012-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-013-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-014-TR': {
+    name: 'گار صندوق',
+    location: 'صندوق',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-019-TR': {
+    name: 'جا گیره',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-020-TR': {
+    name: 'جا کارتی ویزیت',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-021-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-022-TR': {
+    name: 'قیچی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-023-TR': {
+    name: 'پایه چسب نواری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-024-TR': {
+    name: 'پایه چسب نواری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-025-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-026-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-027-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-028-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-015-TR': {
+    name: 'پایه تقویم رومیزی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-016-TR': {
+    name: 'پایه تقویم رومیزی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-017-TR': {
+    name: 'پایه تقویم رومیزی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-018-TR': {
+    name: 'پایه تقویم رومیزی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-019-TR': {
+    name: 'پایه تقویم رومیزی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-002-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-003-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-004-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-005-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-006-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-FUR-020-TR': {
+    name: 'کمد قفسه زونکن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-021-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-022-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-023-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-007-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-029-TR': {
+    name: 'پانچ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-030-TR': {
+    name: 'پانچ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-031-TR': {
+    name: 'جا گیره',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-032-TR': {
+    name: 'جا کارتی ویزیت',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-033-TR': {
+    name: 'جا کارتی ویزیت',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-034-TR': {
+    name: 'پانچ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-035-TR': {
+    name: 'پانچ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-036-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-037-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-038-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-039-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-040-TR': {
+    name: 'پانچ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-041-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-024-TR': {
+    name: 'میز دو کشو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-025-TR': {
+    name: 'میز - دو کشو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-026-TR': {
+    name: 'میز دو کشو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-027-TR': {
+    name: 'میز طوسی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-028-TR': {
+    name: 'میز سفید',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-029-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-030-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-031-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-032-TR': {
+    name: 'میز گرد کوچک',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-033-TR': {
+    name: 'میز گرد کوچک',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-034-TR': {
+    name: 'کمد قفسه زونکن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-035-TR': {
+    name: 'کمد قفسه زونکن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-036-TR': {
+    name: 'کمد قفسه زونکن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-037-TR': {
+    name: 'کمد قفسه زونکن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-038-TR': {
+    name: 'کمد قفسه زونکن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-ACC-024-TR': {
+    name: 'فلش',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-004-TR': {
+    name: 'محافظ برق',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-005-TR': {
+    name: 'ماشین حساب',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-006-TR': {
+    name: 'ماشین حساب',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-042-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-043-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-044-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-020-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-021-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-022-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-023-TR': {
+    name: 'اسکنر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-025-TR': {
+    name: 'فلش',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-045-TR': {
+    name: 'دستگاه کپی',
+    brand: 'CANON',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-024-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-025-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-039-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-040-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-007-TR': {
+    name: 'ماشین حساب',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-026-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-008-TR': {
+    name: 'ظرف چوبی زیر شکلاتی',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-009-TR': {
+    name: 'ظرف چوبی زیر شکلاتی',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-010-TR': {
+    name: 'قهوه ساز',
+    brand: 'SMEG',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-027-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-011-TR': {
+    name: 'ماشین حساب',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-041-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-042-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-043-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-044-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },  'AEI-ACC-024-TR': {
+    name: 'فلش',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-004-TR': {
+    name: 'محافظ برق',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-005-TR': {
+    name: 'ماشین حساب',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-006-TR': {
+    name: 'ماشین حساب',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-042-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-043-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-044-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-020-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-021-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-022-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-023-TR': {
+    name: 'اسکنر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-025-TR': {
+    name: 'فلش',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-045-TR': {
+    name: 'دستگاه کپی',
+    brand: 'CANON',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-024-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-025-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-039-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-040-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-007-TR': {
+    name: 'ماشین حساب',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-026-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-008-TR': {
+    name: 'ظرف چوبی زیر شکلاتی',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-009-TR': {
+    name: 'ظرف چوبی زیر شکلاتی',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-010-TR': {
+    name: 'قهوه ساز',
+    brand: 'SMEG',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-027-TR': {
+    name: 'دستگاه پرینتر',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-011-TR': {
+    name: 'ماشین حساب',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-041-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-042-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-043-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-044-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-FUR-045-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-046-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-047-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-046-TR': {
+    name: 'منگنه',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-048-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-049-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-050-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-051-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-052-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-053-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-054-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-028-TR': {
+    name: 'کامپیوتر',
+    brand: 'ASUS',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-026-TR': {
+    name: 'کیبورد',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-027-TR': {
+    name: 'ماوس',
+    brand: 'HP',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-055-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-056-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-029-TR': {
+    name: 'مودم',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-012-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-013-TR': {
+    name: 'محافظ برق',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-047-TR': {
+    name: 'پایه چسب نواری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-014-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-048-TR': {
+    name: 'کنترل ریموت چراغ',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-057-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-058-TR': {
+    name: 'صندلی کوچک',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-059-TR': {
+    name: 'صندلی کوچک',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-060-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-ST-049-TR': {
+    name: 'میل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-061-TR': {
+    name: 'مبل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-050-TR': {
+    name: 'میل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-051-TR': {
+    name: 'میل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-062-TR': {
+    name: 'مبل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-063-TR': {
+    name: 'مبل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-015-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-016-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-064-TR': {
+    name: 'گاوصندوق',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-065-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-066-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-067-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-068-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-069-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-070-TR': {
+    name: 'پرچم',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-052-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-008-TR': {
+    name: 'اسپیکر',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-071-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-072-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-073-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-074-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-075-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-053-TR': {
+    name: 'ظرف دستمال',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-054-TR': {
+    name: 'ظرف دستمال',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-076-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-077-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-078-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-079-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-080-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-081-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-082-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-083-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-009-TR': {
+    name: 'تلفن',
+    brand: 'PANASONIC',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-084-TR': {
+    name: 'زنگ رومیزی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-017-TR': {
+    name: 'دستگاه فکس',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-APP-018-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-019-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-020-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-021-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-022-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-085-TR': {
+    name: 'میز گرد',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-086-TR': {
+    name: 'میز',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-055-TR': {
+    name: 'جا گیره',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-056-TR': {
+    name: 'جا خودکاری',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-028-TR': {
+    name: 'هدفون',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-023-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-024-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-025-TR': {
+    name: 'دستگاه تصفیه هوا',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-010-TR': {
+    name: 'TV',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-011-TR': {
+    name: 'TV',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-012-TR': {
+    name: 'رسیور ماهواره',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-057-TR': {
+    name: 'زیرپایی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-058-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-059-TR': {
+    name: 'کنترل تصفیه هوا green',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-060-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-061-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-062-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-063-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-064-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-065-TR': {
+    name: 'سطل',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-013-TR': {
+    name: 'کنترل TV',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-066-TR': {
+    name: 'جا کارتی ویزیت',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-026-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-027-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-087-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-AV-014-TR': {
+    name: 'آنتن',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-067-TR': {
+    name: 'دوربین',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-068-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-069-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-070-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-071-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-072-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-073-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+  'AEI-ST-074-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-075-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-028-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-029-TR': {
+    name: 'کنترل کولر',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-078-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-088-TR': {
+    name: 'تابلو',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-079-TR': {
+    name: 'گلدان',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-030-TR': {
+    name: 'چای ساز',
+    brand: '-',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-031-TR': {
+    name: 'قهوه ساز',
+    brand: 'SMEG',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-032-TR': {
+    name: 'توستر نان',
+    brand: '-',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-033-TR': {
+    name: 'جانونی',
+    brand: '-',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ST-080-TR': {
+    name: 'ظرف دستمال',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-089-TR': {
+    name: 'آبچکان رومیزی',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-034-TR': {
+    name: 'جا مایع',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-035-TR': {
+    name: 'دستگاه تصفیه آب',
+    brand: '-',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-036-TR': {
+    name: 'یخچال',
+    brand: '-',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-090-TR': {
+    name: 'کمد',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-037-TR': {
+    name: 'ماکروویو',
+    brand: '-',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-038-TR': {
+    name: 'محافظ برق',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-039-TR': {
+    name: 'جارو دستی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-040-TR': {
+    name: 'طی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-FUR-091-TR': {
+    name: 'صندلی',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-APP-041-TR': {
+    name: 'قهوه ساز',
+    brand: 'SMEG',
+    model: '-',
+    location: 'آبدارخانه',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-IT-030-TR': {
+    name: 'لپ‌تاپ',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  },
+
+  'AEI-ACC-029-TR': {
+    name: 'ماوس',
+    brand: '-',
+    model: '-',
+    location: 'اداری',
+    role: '-',
+    status: 'فعال'
+  }
