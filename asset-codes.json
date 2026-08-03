@@ -1,60 +1,84 @@
-'AEI-FUR-001-TEH': {
-  name: 'میز',
-  location: 'مالی',
-  role: 'حسابدار'
-},
-
-'AEI-FUR-002-TEH': {
-  name: 'میز',
-  location: 'مالی',
-  role: 'رئیس حسابداری'
-},
-
-'AEI-FUR-003-TEH': {
-  name: 'صندلی',
-  location: 'مالی'
-},
-
-'AEI-FUR-004-TEH': {
-  name: 'میز',
-  location: 'مدیریت',
-  role: 'مدیر عامل'
-},
-
-'AEI-FUR-005-TEH': {
-  name: 'صندلی',
-  location: 'مدیریت',
-  role: 'مدیر عامل'
-},
-
-'AEI-FUR-006-TEH': {
-  name: 'میز',
-  location: 'اداری',
-  role: 'مسئول دفتر'
-},
-
-'AEI-FUR-007-TEH': {
-  name: 'کمد',
-  location: 'تدارکات',
-  role: 'مسئول تدارکات'
-},
-
-'AEI-FUR-008-TEH': {
-  name: 'میز',
-  location: 'فنی HSE',
-  role: 'مسئول HSE'
-},
-
 'AEI-IT-001-TEH': {
   name: 'لپ تاپ',
-  brand: 'ASUS',
-  model: '-',
-  location: 'اداری'
+  brand: 'HP',
+  location: 'مالی',
+  currentOwner: 'مدیر مالی',
+  status: 'فعال'
 },
 
 'AEI-IT-002-TEH': {
   name: 'لپ تاپ',
+  brand: 'ASUS',
+  model: 'R565J',
+  location: 'فنی',
+  currentOwner: 'کارشناس منابع انسانی',
+  status: 'فعال'
+},
+
+'AEI-ACC-001-TEH': {
+  name: 'هولدر لپ تاپ',
+  location: 'فنی',
+  currentOwner: 'کارشناس منابع انسانی',
+  status: 'فعال'
+},
+
+'AEI-ACC-002-TEH': {
+  name: 'ماوس',
+  brand: 'HP',
+  model: 'MOHQUO',
+  location: 'فنی',
+  currentOwner: 'کارشناس منابع انسانی',
+  status: 'فعال'
+},
+
+'AEI-ACC-003-TEH': {
+  name: 'شارژر لپ تاپ',
+  brand: 'ASUS',
+  model: '2211FH1304',
+  location: 'فنی',
+  currentOwner: 'کارشناس منابع انسانی',
+  status: 'فعال'
+},
+
+'AEI-IT-003-TEH': {
+  name: 'کامپیوتر',
   brand: 'MSI',
-  model: '-',
-  location: 'اداری'
+  model: 'AF83',
+  location: 'مالی',
+  currentOwner: 'حسابدار',
+  status: 'فعال'
+},
+
+'AEI-IT-004-TEH': {
+  name: 'کامپیوتر',
+  brand: 'MSI',
+  model: 'AF83',
+  location: 'مالی',
+  currentOwner: 'رئیس حسابداری',
+  status: 'فعال'
+},
+
+'AEI-ST-001-TEH': {
+  name: 'دستگاه کارت ساعت',
+  location: 'واحد اداری',
+  currentOwner: 'مسئول دفتر',
+  status: 'فعال'
+},
+
+'AEI-IT-005-TEH': {
+  name: 'کامپیوتر',
+  brand: 'MSI',
+  model: 'AF83',
+  location: 'واحد اداری',
+  currentOwner: 'مسئول دفتر',
+  status: 'فعال'
+},
+
+'AEI-IT-006-TEH': {
+  name: 'کامپیوتر',
+  brand: 'ASUS',
+  model: 'PA278QV',
+  location: 'واحد مدیریت',
+  currentOwner: 'مدیر عامل',
+  status: 'فعال'
 },
