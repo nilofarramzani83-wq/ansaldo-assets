@@ -43,21 +43,20 @@ body{
 
 /* ---------- logo ---------- */
 
+/* ---------- logo ---------- */
+
 .logo{
   display:flex;
-  align-items:center;
-  gap:12px;
   justify-content:center;
+  align-items:center;
   margin-bottom:18px;
 }
-.logo .ansaldo{
-...
-}
-.logo .divider{
-...
-}
-.logo .energia{
-...
+
+.logo img{
+  width:280px;
+  max-width:90%;
+  height:auto;
+  display:block;
 }
 
 /* ---------- the plate (asset card) ---------- */
