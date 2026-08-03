@@ -1,6 +1,12 @@
 // این فایل به‌صورت خودکار از فایل اموال شما ساخته شده است.
 // برای اضافه کردن وسیله‌ی جدید، فقط یک ردیف جدید با همین الگو اضافه کنید.
+const assetsTR = {};
 
+Object.keys(assets).forEach(code => {
+  assetsTR[code + "-TR"] = assets[code];
+});
+
+Object.assign(assets, assetsTR);
 export const assets = {
   'AEI-IT-001': {
         name: 'لپ‌تاپ',
