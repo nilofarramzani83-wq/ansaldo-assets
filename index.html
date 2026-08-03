@@ -1,63 +1,239 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Ansaldo Assets</title>
+
+<title>سامانه مدیریت اموال</title>
 
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
 </head>
+
 
 <body>
 
+
 <div class="logo">
-    <span class="energia">energia</span>
-    <span class="divider"></span>
-    <span class="ansaldo">ansaldo</span>
+
+<span class="ansaldo">ansaldo</span>
+
+<span class="divider"></span>
+
+<span class="energia">energia</span>
+
 </div>
+
+
 
 <div class="page-card" style="text-align:center">
 
-    <h1>سامانه مدیریت اموال</h1>
 
-    <p>
-        مشاهده مشخصات دارایی‌های سازمانی
-        <br>
-        با اسکن QR Code یا وارد کردن کد اموال
-    </p>
+<h1>
+سامانه مدیریت اموال
+</h1>
 
-    <img
-        src="assets/qr.png"
-        alt="QR"
-        style="width:180px;margin:25px auto 10px;display:block;"
-    >
 
-    <label>کد اموال</label>
+<p>
+ساخت و مدیریت QR Code دارایی‌های سازمانی
+</p>
 
-    <input
-        id="assetCode"
-        placeholder="AEI-IT-001"
-    >
 
-    <button class="btn" onclick="goAsset()">
-        مشاهده اطلاعات
-    </button>
+
+<div style="font-size:80px;margin:25px">
+📦
+</div>
+
+
+
+<label>
+کد اموال
+</label>
+
+
+<input 
+id="assetCode"
+placeholder="مثلا AEI-IT-001"
+>
+
+
+
+<button class="btn" onclick="createQR()">
+ساخت QR Code
+</button>
+
+
+
+<button class="btn" onclick="downloadAllQR()">
+دانلود ZIP همه QR ها
+</button>
+
+
+
+<div id="qr-result"></div>
+
+
+
+<a id="qr-download" style="display:none">
+دانلود QR
+</a>
+
 
 </div>
 
+
+
+
 <script>
 
-function goAsset(){
 
-const code=document.getElementById("assetCode").value.trim();
+let currentQR=null;
 
-if(!code)return;
 
-window.location.href="./asset.html?code="+encodeURIComponent(code);
+
+function createQR(){
+
+
+let code=document.getElementById("assetCode").value.trim();
+
+
+if(!code){
+alert("کد اموال را وارد کنید");
+return;
+}
+
+
+
+document.getElementById("qr-result").innerHTML="";
+
+
+
+currentQR=new QRCode(
+document.getElementById("qr-result"),
+{
+text:window.location.origin+"/asset.html?code="+code,
+width:220,
+height:220
+}
+);
+
+
+
+setTimeout(()=>{
+
+
+let canvas=document.querySelector("#qr-result canvas");
+
+
+let link=document.getElementById("qr-download");
+
+
+link.href=canvas.toDataURL();
+
+
+link.download=code+".png";
+
+link.innerHTML="دانلود QR";
+
+
+link.style.display="inline-block";
+
+
+},500);
+
+
 
 }
 
+
+
+
+async function downloadAllQR(){
+
+
+
+let response=await fetch("assets/codes.json");
+
+let codes=await response.json();
+
+
+
+let zip=new JSZip();
+
+
+
+for(let item of codes){
+
+
+
+let div=document.createElement("div");
+
+
+
+new QRCode(div,{
+
+text:window.location.origin+"/asset.html?code="+item.code,
+
+width:300,
+
+height:300
+
+});
+
+
+
+await new Promise(r=>setTimeout(r,100));
+
+
+
+let canvas=div.querySelector("canvas");
+
+
+let img=canvas.toDataURL()
+.split(",")[1];
+
+
+zip.file(
+item.code+".png",
+img,
+{
+base64:true
+}
+);
+
+
+
+}
+
+
+
+let content=await zip.generateAsync(
+{
+type:"blob"
+}
+);
+
+
+
+saveAs(
+content,
+"all-assets-qr.zip"
+);
+
+
+
+}
+
+
+
 </script>
 
+
 </body>
+
 </html>
