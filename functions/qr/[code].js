@@ -89,10 +89,32 @@ ${renderLogo()}
   return pageShell(body, `کد نامعتبر · ${code}`);
 }
 
+// برچسب‌های چاپ‌شده ممکن است با پسوند "-TEH" باشند، در حالی که کلیدهای
+// دیتای اموال بدون این پسوند ذخیره شده‌اند. این تابع هر دو حالت را
+// امتحان می‌کند تا کدهای قدیمی و جدید هر دو کار کنند.
+function lookupAsset(code) {
+  if (assets[code]) return assets[code];
+
+  const upper = code.toUpperCase();
+  const withoutTeh = upper.replace(/-TEH$/, "");
+  if (assets[withoutTeh]) return assets[withoutTeh];
+
+  const withTeh = upper.endsWith("-TEH") ? upper : `${upper}-TEH`;
+  if (assets[withTeh]) return assets[withTeh];
+
+  // تطبیق بدون حساسیت به بزرگ/کوچک بودن حروف، برای اطمینان بیشتر
+  const target = withoutTeh;
+  for (const key of Object.keys(assets)) {
+    if (key.toUpperCase() === target) return assets[key];
+  }
+
+  return null;
+}
+
 export async function onRequestGet(context) {
   const rawCode = context.params.code || "";
   const code = decodeURIComponent(rawCode).trim();
-  const asset = assets[code];
+  const asset = lookupAsset(code);
 
   if (!asset) {
     return new Response(renderNotFound(code), {
