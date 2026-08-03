@@ -34,11 +34,9 @@ function renderLogo() {
 function renderFound(code, asset) {
   const rows = [];
   rows.push(["نام کالا", asset.name]);
-    if (asset.brand) rows.push(["برند", asset.brand]);
   if (asset.model) rows.push(["مدل", asset.model]);
   rows.push(["بخش / محل استقرار", asset.location]);
-  if (asset.currentOwner)
-  rows.push(["مسئول فعلی", asset.currentOwner]);
+  if (asset.role) rows.push(["مسئول فعلی", asset.role]);
   rows.push(["کد اموال", code, "code"]);
   if (asset.status) rows.push(["وضعیت", asset.status, "status"]);
 
@@ -53,8 +51,8 @@ function renderFound(code, asset) {
     .join("");
 
   const body = `
+${renderLogo()}
 <div class="plate">
-  ${renderLogo()}
   <div class="plate-title">
     <h1>اطلاعات اموال</h1>
     <p>مشخصات دارایی سازمانی</p>
@@ -73,8 +71,8 @@ function renderFound(code, asset) {
 
 function renderNotFound(code) {
   const body = `
+${renderLogo()}
 <div class="plate not-found">
-  ${renderLogo()}
   <div class="plate-title">
     <h1>کد نامعتبر</h1>
     <p>این کد در فهرست اموال ثبت نشده</p>
@@ -93,7 +91,7 @@ function renderNotFound(code) {
 
 // برچسب‌های چاپ‌شده ممکن است با پسوند "-TEH" باشند، در حالی که کلیدهای
 // دیتای اموال بدون این پسوند ذخیره شده‌اند. این تابع هر دو حالت را
-// امتحان میکند تا کدهای قدیمی و جدید هر دو کار کنند.
+// امتحان می‌کند تا کدهای قدیمی و جدید هر دو کار کنند.
 function lookupAsset(code) {
   if (assets[code]) return assets[code];
 
