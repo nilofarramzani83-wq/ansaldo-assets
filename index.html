@@ -1,40 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ansaldoassets · سامانه اموال شرکت</title>
-<link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ansaldo Assets</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="logo">
-    <span class="ansaldo">ansaldo</span>
-    <span class="divider"></span>
+
+<div class="logo">
     <span class="energia">energia</span>
-  </div>
+    <span class="divider"></span>
+    <span class="ansaldo">ansaldo</span>
+</div>
 
-  <div class="page-card">
-    <h1>سامانه اموال شرکت</h1>
+<div class="page-card" style="text-align:center">
+
+    <h1>سامانه مدیریت اموال</h1>
+
     <p>
-      هر برچسب QR روی اموال شرکت به یک آدرس اختصاصی روی همین سایت وصل است،
-      مثل <code>/qr/AEI-IT-001</code>. با اسکن هر کد، اطلاعات همان وسیله
-      نمایش داده می‌شود.
+        مشاهده مشخصات دارایی‌های سازمانی
+        <br>
+        با اسکن QR Code یا وارد کردن کد اموال
     </p>
 
-    <p style="margin-top:18px;">چند نمونه برای تست (از دسته‌های مختلف):</p>
-    <div class="example-codes">
-      <a href="/qr/AEI-IT-001">AEI-IT-001</a>
-      <a href="/qr/AEI-ACC-038">AEI-ACC-038</a>
-      <a href="/qr/AEI-AV-001">AEI-AV-001</a>
-      <a href="/qr/AEI-FUR-016">AEI-FUR-016</a>
-      <a href="/qr/AEI-ST-001">AEI-ST-001</a>
-      <a href="/qr/AEI-APP-014">AEI-APP-014</a>
-    </div>
+    <img
+        src="assets/qr.png"
+        alt="QR"
+        style="width:180px;margin:25px auto 10px;display:block;"
+    >
 
-    <p style="margin-top:22px;">
-      برای ساخت QR Code برای کد جدید، از
-      <a href="/qr-generator.html">ابزار تولید QR</a> استفاده کنید.
-    </p>
-  </div>
+    <label>کد اموال</label>
+
+    <input
+        id="assetCode"
+        placeholder="AEI-IT-001"
+    >
+
+    <button class="btn" onclick="goAsset()">
+        مشاهده اطلاعات
+    </button>
+
+</div>
+
+<script>
+
+function goAsset(){
+
+const code=document.getElementById("assetCode").value.trim();
+
+if(!code)return;
+
+window.location.href="./asset.html?code="+encodeURIComponent(code);
+
+}
+
+</script>
+
 </body>
 </html>
