@@ -119,16 +119,17 @@
   async function bulkGenerate() {
     bulkBtn.disabled = true;
     try {
-      const res = await fetch('/_data/assets.js');
+    const res = await fetch('/_data/assets.js');
 const text = await res.text();
 
 const matches = [...text.matchAll(/['"]([A-Z0-9-]+-TR)['"]/g)];
 
 const list = matches.map(m => ({
   code: m[1]
-  console.log(list);
-  
 }));
+
+console.log(list);
+      
       const zip = new JSZip();
       for (let i = 0; i < list.length; i++) {
         const { code } = list[i];
