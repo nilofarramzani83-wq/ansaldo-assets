@@ -122,7 +122,7 @@
       const res = await fetch('/_data/assets.js');
 const text = await res.text();
 
-const matches = [...text.matchAll(/'([^']+-TR)'/g)];
+const matches = [...text.matchAll(/['"]([A-Z0-9-]+-TR)['"]/g)];
 
 const list = matches.map(m => ({
   code: m[1]
