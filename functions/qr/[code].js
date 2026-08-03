@@ -34,6 +34,7 @@ function renderLogo() {
 function renderFound(code, asset) {
   const rows = [];
   rows.push(["نام کالا", asset.name]);
+    if (asset.brand) rows.push(["برند", asset.brand]);
   if (asset.model) rows.push(["مدل", asset.model]);
   rows.push(["بخش / محل استقرار", asset.location]);
   if (asset.role) rows.push(["مسئول فعلی", asset.role]);
