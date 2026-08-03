@@ -131,7 +131,7 @@ function qrDataUrl(text) {
   async function bulkGenerate() {
     bulkBtn.disabled = true;
     try {
-    const res = await fetch('/_data/assets.js');
+    const res = await fetch('/assets.js');
 const text = await res.text();
       
 console.log(text.slice(0,500));
