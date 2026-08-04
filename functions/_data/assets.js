@@ -1,14 +1,15 @@
 export const assets = {
   'AEI-IT-001-TEH': {
     name: 'لپ تاپ',
-    model: 'HP',
+    brand: 'HP',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
   },
   'AEI-IT-002-TEH': {
     name: 'لپ تاپ',
-    model: 'ASUS R565J',
+    brand: 'ASUS',
+    model: 'R565J',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
@@ -21,28 +22,32 @@ export const assets = {
   },
   'AEI-ACC-002-TEH': {
     name: 'ماوس',
-    model: 'HP MOHQUO',
+    brand: 'HP',
+    model: 'MOHQUO',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-IT-003-TEH': {
     name: 'کامپیوتر',
-    model: 'ASUS 2211FH1304',
+    brand: 'ASUS',
+    model: '2211FH1304',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-IT-004-TEH': {
     name: 'کامپیوتر',
-    model: 'MSI AF83',
+    brand: 'MSI',
+    model: 'AF83',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-005-TEH': {
     name: 'کامپیوتر',
-    model: 'MSI AF83',
+    brand: 'MSI',
+    model: 'AF83',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
@@ -55,21 +60,24 @@ export const assets = {
   },
   'AEI-IT-006-TEH': {
     name: 'کامپیوتر',
-    model: 'MSI AF83',
+    brand: 'MSI',
+    model: 'AF83',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-IT-007-TEH': {
     name: 'کامپیوتر',
-    model: 'ASUS PA278QV',
+    brand: 'ASUS',
+    model: 'PA278QV',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-IT-008-TEH': {
     name: 'کامپیوتر',
-    model: 'MSI AF83',
+    brand: 'MSI',
+    model: 'AF83',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
     status: 'فعال'
@@ -88,35 +96,38 @@ export const assets = {
   },
   'AEI-IT-009-TEH': {
     name: 'لپ تاپ',
-    model: 'HP HSN113C4',
+    brand: 'HP',
+    model: 'HSN113C4',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-010-TEH': {
     name: 'لپ تاپ',
-    model: 'HP HSNQ28C4',
+    brand: 'HP',
+    model: 'HSNQ28C4',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-005-TEH': {
     name: 'آداپتور شارژ لپ تاپ HP',
-    model: 'HP',
+    brand: 'HP',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-006-TEH': {
     name: 'آداپتور شارژ لپ تاپ HP',
-    model: 'HP',
+    brand: 'HP',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-007-TEH': {
     name: 'آداپتور شارژ لپ تاپ HP',
-    model: 'HP TPN DA15',
+    brand: 'HP',
+    model: 'TPN DA15',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -129,7 +140,8 @@ export const assets = {
   },
   'AEI-ACC-009-TEH': {
     name: 'ماوس',
-    model: 'LOGI TECH M275',
+    brand: 'LOGI TECH',
+    model: 'M275',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -154,28 +166,30 @@ export const assets = {
   },
   'AEI-ACC-013-TEH': {
     name: 'ماوس',
-    model: 'MSI MA04',
+    brand: 'MSI',
+    model: 'MA04',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-ACC-014-TEH': {
     name: 'ماوس',
-    model: 'MSI',
+    brand: 'MSI',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-IT-011-TEH': {
     name: 'کیس',
-    model: 'ASUS',
+    brand: 'ASUS',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-ACC-015-TEH': {
     name: 'ماوس',
-    model: 'IGLOO FL-20B',
+    brand: 'IGLOO',
+    model: 'FL-20B',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
@@ -200,42 +214,45 @@ export const assets = {
   },
   'AEI-ACC-016-TEH': {
     name: 'ماوس',
-    model: 'MSI MA04',
+    brand: 'MSI',
+    model: 'MA04',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
     status: 'فعال'
   },
   'AEI-ACC-017-TEH': {
     name: 'داکینگ استیشن',
-    model: 'HP D9Y19AV',
+    brand: 'HP',
+    model: 'D9Y19AV',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-018-TEH': {
     name: 'کیبورد',
-    model: 'LOGI TECH K345',
+    brand: 'LOGI TECH',
+    model: 'K345',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-019-TEH': {
     name: 'کیبورد',
-    model: 'MSI',
+    brand: 'MSI',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-020-TEH': {
     name: 'کیبورد',
-    model: 'LOGI TECH',
+    brand: 'LOGI TECH',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ACC-021-TEH': {
     name: 'کیبورد',
-    model: 'MSI',
+    brand: 'MSI',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
@@ -248,21 +265,23 @@ export const assets = {
   },
   'AEI-ACC-023-TEH': {
     name: 'کیبورد',
-    model: 'RF1430',
+    brand: 'RF1430',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
     status: 'فعال'
   },
   'AEI-ACC-024-TEH': {
     name: 'ماوس',
-    model: 'LOGITECH M220',
+    brand: 'LOGITECH',
+    model: 'M220',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-ACC-025-TEH': {
     name: 'ماوس',
-    model: 'MSI MA04',
+    brand: 'MSI',
+    model: 'MA04',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
@@ -275,35 +294,35 @@ export const assets = {
   },
   'AEI-ACC-026-TEH': {
     name: 'کیبورد',
-    model: 'MSI',
+    brand: 'MSI',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-ACC-027-TEH': {
     name: 'کیبورد',
-    model: 'LOGI TECH',
+    brand: 'LOGI TECH',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-IT-012-TEH': {
     name: 'کامپیوتر',
-    model: 'MSI',
+    brand: 'MSI',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
   },
   'AEI-ACC-028-TEH': {
     name: 'ماوس',
-    model: 'LOGI TECH',
+    brand: 'LOGI TECH',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
   },
   'AEI-ACC-029-TEH': {
     name: 'کیبورد',
-    model: 'LOGI TECH',
+    brand: 'LOGI TECH',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
@@ -322,7 +341,7 @@ export const assets = {
   },
   'AEI-ACC-030-TEH': {
     name: 'ماوس',
-    model: 'LOGI TECH',
+    brand: 'LOGI TECH',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -395,21 +414,22 @@ export const assets = {
   },
   'AEI-ACC-031-TEH': {
     name: 'ماوس',
-    model: 'LOGI TECH',
+    brand: 'LOGI TECH',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-TEL-001-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-APP-003-TEH': {
     name: 'محافظ برق',
-    model: 'MELLONI',
+    brand: 'MELLONI',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
@@ -434,7 +454,7 @@ export const assets = {
   },
   'AEI-ST-015-TEH': {
     name: 'منگنه',
-    model: 'SAX 149',
+    brand: 'SAX 149',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
@@ -597,35 +617,40 @@ export const assets = {
   },
   'AEI-TEL-002-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
   },
   'AEI-TEL-003-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-TEL-004-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-TEL-005-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-TEL-006-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
@@ -656,21 +681,24 @@ export const assets = {
   },
   'AEI-TEL-007-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-ST-044-TEH': {
     name: 'پانچ',
-    model: 'PU 850',
+    brand: 'PU',
+    model: '850',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-ST-045-TEH': {
     name: 'پانچ',
-    model: 'PNC 20SH',
+    brand: 'PNC',
+    model: '20SH',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
@@ -695,56 +723,62 @@ export const assets = {
   },
   'AEI-ST-049-TEH': {
     name: 'پانچ',
-    model: 'PNC 20SH',
+    brand: 'PNC',
+    model: '20SH',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ST-050-TEH': {
     name: 'پانچ',
-    model: 'PNC 20SH',
+    brand: 'PNC',
+    model: '20SH',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-ST-051-TEH': {
     name: 'منگنه',
-    model: 'KANGARO HD-45',
+    brand: 'KANGARO',
+    model: 'HD-45',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-ST-052-TEH': {
     name: 'منگنه',
-    model: 'CREATOORS',
+    brand: 'CREATOORS',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-ST-053-TEH': {
     name: 'منگنه',
-    model: 'MAX HD-50DF',
+    brand: 'MAX',
+    model: 'HD-50DF',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ST-054-TEH': {
     name: 'منگنه',
-    model: 'CREATOORS PST-1-25B',
+    brand: 'CREATOORS',
+    model: 'PST-1-25B',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ST-055-TEH': {
     name: 'پانچ',
-    model: 'PU 3000',
+    brand: 'PU',
+    model: '3000',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ST-056-TEH': {
     name: 'منگنه',
-    model: 'MAX CO.LTO',
+    brand: 'MAX CO.LTO',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -853,63 +887,71 @@ export const assets = {
   },
   'AEI-ST-057-TEH': {
     name: 'ماشین حساب',
-    model: 'SHARP CS-2130',
+    brand: 'SHARP',
+    model: 'CS-2130',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ST-058-TEH': {
     name: 'ماشین حساب',
-    model: 'CASIO DJ-240D',
+    brand: 'CASIO',
+    model: 'DJ-240D',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-ST-059-TEH': {
     name: 'منگنه',
-    model: 'NOVUS',
+    brand: 'NOVUS',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-ST-060-TEH': {
     name: 'منگنه',
-    model: 'MAX HD-10',
+    brand: 'MAX',
+    model: 'HD-10',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-ST-061-TEH': {
     name: 'منگنه',
-    model: 'MAX HD-10',
+    brand: 'MAX',
+    model: 'HD-10',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-013-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP M404DW',
+    brand: 'HP',
+    model: 'M404DW',
     location: 'مالی',
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-IT-014-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP 7000 M712',
+    brand: 'HP',
+    model: '7000 M712',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-015-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP CP 1025 COLOR',
+    brand: 'HP',
+    model: 'CP 1025 COLOR',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-016-TEH': {
     name: 'اسکنر',
-    model: 'HP 2500 F1',
+    brand: 'HP',
+    model: '2500 F1',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -922,21 +964,24 @@ export const assets = {
   },
   'AEI-IT-017-TEH': {
     name: 'دستگاه کپی',
-    model: 'SHARP AR-M236',
+    brand: 'SHARP',
+    model: 'AR-M236',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-IT-018-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP M428 FDW',
+    brand: 'HP',
+    model: 'M428 FDW',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-IT-019-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP M452 NW',
+    brand: 'HP',
+    model: 'M452 NW',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
@@ -961,7 +1006,7 @@ export const assets = {
   },
   'AEI-IT-020-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP',
+    brand: 'HP',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
@@ -980,21 +1025,22 @@ export const assets = {
   },
   'AEI-APP-005-TEH': {
     name: 'قهوه ساز',
-    model: 'SMEG',
+    brand: 'SMEG',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-IT-021-TEH': {
     name: 'دستگاه پرینتر',
-    model: 'HP M255 DW',
+    brand: 'HP',
+    model: 'M255 DW',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-ST-065-TEH': {
     name: 'ماشین حساب',
-    model: 'SHARP',
+    brand: 'SHARP',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
@@ -1091,21 +1137,21 @@ export const assets = {
   },
   'AEI-IT-022-TEH': {
     name: 'کامپیوتر',
-    model: 'SAMSUNG',
+    brand: 'SAMSUNG',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-ACC-035-TEH': {
     name: 'کیبورد',
-    model: 'LOGI',
+    brand: 'LOGI',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-ACC-036-TEH': {
     name: 'ماوس',
-    model: 'LOGI',
+    brand: 'LOGI',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
@@ -1124,14 +1170,15 @@ export const assets = {
   },
   'AEI-TEL-008-TEH': {
     name: 'مودم',
-    model: 'HUAWEI',
+    brand: 'HUAWEI',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
   },
   'AEI-APP-006-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'XIAOMI AC-M18-SC',
+    brand: 'XIAOMI',
+    model: 'AC-M18-SC',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
@@ -1356,7 +1403,8 @@ export const assets = {
   },
   'AEI-TEL-009-TEH': {
     name: 'تلفن',
-    model: 'GRANDSTREAM WP825',
+    brand: 'GRANDSTREAM',
+    model: 'WP825',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
     status: 'فعال'
@@ -1375,13 +1423,13 @@ export const assets = {
   },
   'AEI-APP-012-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'XIAOMI',
+    brand: 'XIAOMI',
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
   'AEI-APP-013-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'XIAOMI',
+    brand: 'XIAOMI',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
     status: 'فعال'
@@ -1394,14 +1442,15 @@ export const assets = {
   },
   'AEI-APP-015-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'XIAOMI AC-M18-SC',
+    brand: 'XIAOMI',
+    model: 'AC-M18-SC',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-APP-016-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'GREEN LION',
+    brand: 'GREEN LION',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -1438,41 +1487,46 @@ export const assets = {
   },
   'AEI-APP-017-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'NEOTECH XJ-3900A',
+    brand: 'NEOTECH',
+    model: 'XJ-3900A',
     location: 'فنی',
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
   'AEI-APP-018-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'XIAOMI',
+    brand: 'XIAOMI',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
   },
   'AEI-APP-019-TEH': {
     name: 'دستگاه تصفیه هوا',
-    model: 'GREEN LION GNBLSFANWH',
+    brand: 'GREEN LION',
+    model: 'GNBLSFANWH',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
   },
   'AEI-AV-002-TEH': {
     name: 'TV',
-    model: 'SONY XR-75X80L',
+    brand: 'SONY',
+    model: 'XR-75X80L',
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
   'AEI-AV-003-TEH': {
     name: 'TV',
-    model: 'SONY KD-55X85L',
+    brand: 'SONY',
+    model: 'KD-55X85L',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
   },
   'AEI-AV-004-TEH': {
     name: 'رسیور ماهواره',
-    model: 'MEDIASTAR MS-4030 PRO',
+    brand: 'MEDIASTAR',
+    model: 'MS-4030 PRO',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
@@ -1491,7 +1545,7 @@ export const assets = {
   },
   'AEI-APP-020-TEH': {
     name: 'کنترل تصفیه هوا green',
-    model: 'RELEASE',
+    brand: 'RELEASE',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
@@ -1654,21 +1708,21 @@ export const assets = {
   },
   'AEI-APP-025-TEH': {
     name: 'چای ساز',
-    model: 'PHILIPS',
+    brand: 'PHILIPS',
     location: 'آشپزخانه',
     role: 'خدمتگزار',
     status: 'فعال'
   },
   'AEI-APP-026-TEH': {
     name: 'قهوه ساز',
-    model: 'DELONGHI',
+    brand: 'DELONGHI',
     location: 'آشپزخانه',
     role: 'خدمتگزار',
     status: 'فعال'
   },
   'AEI-APP-027-TEH': {
     name: 'توستر نان',
-    model: 'SMEG',
+    brand: 'SMEG',
     location: 'آشپزخانه',
     role: 'خدمتگزار',
     status: 'فعال'
@@ -1705,7 +1759,7 @@ export const assets = {
   },
   'AEI-APP-032-TEH': {
     name: 'یخچال',
-    model: 'BOSCH',
+    brand: 'BOSCH',
     location: 'آشپزخانه',
     role: 'خدمتگزار',
     status: 'فعال'
@@ -1718,7 +1772,7 @@ export const assets = {
   },
   'AEI-APP-033-TEH': {
     name: 'ماکروویو',
-    model: 'LG',
+    brand: 'LG',
     location: 'آشپزخانه',
     role: 'خدمتگزار',
     status: 'فعال'
@@ -1749,20 +1803,22 @@ export const assets = {
   },
   'AEI-APP-037-TEH': {
     name: 'قهوه ساز',
-    model: 'SMEG',
+    brand: 'SMEG',
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
   'AEI-IT-023-TEH': {
     name: 'لپ تاپ',
-    model: 'ASUS EXPERTBOOK-S4NXCV15Z71918A',
+    brand: 'ASUS',
+    model: 'EXPERTBOOK-S4NXCV15Z71918A',
     location: 'اتاق کنفرانس',
     role: 'آقای عبدهللا پور',
     status: 'فعال'
   },
   'AEI-ACC-038-TEH': {
     name: 'ماوس',
-    model: 'RAPOO 0109M-01',
+    brand: 'RAPOO',
+    model: '0109M-01',
     location: 'اتاق کنفرانس',
     role: 'آقای عبدهللا پور',
     status: 'فعال'
