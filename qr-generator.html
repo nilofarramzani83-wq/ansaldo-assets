@@ -18,7 +18,7 @@
   <div class="page-card">
     <h1>تولید QR برای یک کد دارایی</h1>
     <p>
-      کد دارایی را وارد کنید (مثلاً <code>AEI-IT-026</code>). این ابزار
+      کد دارایی را وارد کنید (مثلاً <code>AEI-IT-026-TEH</code>). این ابزار
       یک QR Code می‌سازد که فقط به آدرس
       <code>/qr/کد</code> روی همین سایت اشاره می‌کند — قبل از تولید،
       حتماً همان کد را به فایل اموال (<code>assets.js</code>) هم اضافه کنید
@@ -26,7 +26,7 @@
     </p>
 
     <label for="code">کد دارایی</label>
-    <input id="code" type="text" placeholder="AEI-IT-026" autocomplete="off">
+    <input id="code" type="text" placeholder="AEI-IT-026-TEH" autocomplete="off">
 
     <button class="btn" id="generate">ساخت QR Code</button>
 
@@ -42,7 +42,7 @@
     <p>
       این گزینه یک فایل ZIP شامل QR Code تمام کدهایی که الان در فایل اموال
       ثبت شده‌اند می‌سازد (هر فایل با نام همان کد، مثل
-      <code>AEI-IT-001.png</code>) — مناسب برای چاپ یکجای همه‌ی برچسب‌ها.
+      <code>AEI-IT-001-TEH.png</code>) — مناسب برای چاپ یکجای همه‌ی برچسب‌ها.
     </p>
     <button class="btn" id="bulk-generate">دانلود ZIP همه‌ی QR کدها</button>
     <p id="bulk-status" style="margin-top:10px; font-size:12.5px;"></p>
@@ -75,7 +75,6 @@
     urlLabel.textContent = url;
     result.style.display = 'block';
 
-    // wait a tick for the canvas/img to render before wiring the download link
     setTimeout(() => {
       const img = canvasHolder.querySelector('img, canvas');
       if (img && img.toDataURL) {
@@ -90,7 +89,6 @@
   btn.addEventListener('click', generate);
   input.addEventListener('keydown', (e) => { if (e.key === 'Enter') generate(); });
 
-  // ---- bulk download: all codes as a ZIP of PNGs ----
   const bulkBtn = document.getElementById('bulk-generate');
   const bulkStatus = document.getElementById('bulk-status');
 
@@ -133,17 +131,17 @@ function qrDataUrl(text) {
     try {
     const res = await fetch('/assets.js');
 const text = await res.text();
-      
+
 console.log(text.slice(0,500));
-      
-const matches = [...text.matchAll(/['"]([A-Z0-9-]+-TR)['"]/g)];
+
+const matches = [...text.matchAll(/['"]([A-Z0-9-]+-TEH)['"]/g)];
 
 const list = matches.map(m => ({
   code: m[1]
 }));
 
 console.log(list);
-      
+
       const zip = new JSZip();
       for (let i = 0; i < list.length; i++) {
         const { code } = list[i];
