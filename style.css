@@ -498,3 +498,11 @@ body{
 .example-codes{
     justify-content:center;
 }
+
+body{
+    background:red !important;
+}
+
+.page-card{
+    background:yellow !important;
+}
