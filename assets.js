@@ -1823,4 +1823,13 @@ const assets = {
     currentOwner: 'آقای عبدهللا پور',
     status: 'فعال'
   },
+   },
+'AEI-IT-024-TEH': { 
+   name: 'تلفن همراه',
+    brand: 'SAMSUNG',
+    model: 'Galaxy A11',
+    location: 'مالی',
+    role: 'مسئول حسابداری',
+    status: 'فعال'
+},
 };
