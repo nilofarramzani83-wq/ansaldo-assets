@@ -327,3 +327,88 @@ body{
 
 /* Fix dashboard layout */
 
+/* ---------- Dashboard Stats ---------- */
+
+.stats-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:20px 0;
+    width:100%;
+}
+
+.stat{
+    flex:1;
+    background:#FAFAFA;
+    border:1px solid #ECECEC;
+    border-radius:14px;
+    padding:12px 8px;
+    text-align:center;
+}
+
+.stat span{
+    display:block;
+    font-size:24px;
+    font-weight:800;
+    color:var(--red);
+    font-family:'Poppins',sans-serif;
+}
+
+.stat small{
+    display:block;
+    margin-top:5px;
+    font-size:12px;
+    color:var(--gray);
+}
+
+
+/* ---------- Index Buttons ---------- */
+
+.page-card .btn{
+    display:flex;
+    width:100%;
+    margin-top:16px;
+}
+
+
+/* ---------- Example Codes ---------- */
+
+.example-codes{
+    margin-top:16px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.example-codes a{
+    font-family:'Poppins',monospace;
+    font-size:12px;
+    color:var(--red-dark);
+    background:var(--red-tint);
+    border:1px solid var(--red-tint-border);
+    padding:7px 14px;
+    border-radius:999px;
+    text-decoration:none;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:700px){
+
+    .stats-box{
+        flex-direction:row;
+        gap:8px;
+    }
+
+    .stat{
+        padding:10px 5px;
+    }
+
+    .stat span{
+        font-size:22px;
+    }
+
+}
