@@ -14,13 +14,13 @@
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-ACC-001-TEH": {
+  "AEI-IT-003-TEH": {
     "name": "هولدر لپ تاپ",
     "location": "فنی",
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-ACC-002-TEH": {
+  "AEI-IT-004-TEH": {
     "name": "ماوس",
     "brand": "HP",
     "model": "MOHQUO",
@@ -28,7 +28,7 @@
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-IT-003-TEH": {
+  "AEI-IT-005-TEH": {
     "name": "کامپیوتر",
     "brand": "ASUS",
     "model": "2211FH1304",
@@ -36,7 +36,7 @@
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-IT-004-TEH": {
+  "AEI-IT-006-TEH": {
     "name": "کامپیوتر",
     "brand": "MSI",
     "model": "AF83",
@@ -44,7 +44,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-IT-005-TEH": {
+  "AEI-IT-007-TEH": {
     "name": "کامپیوتر",
     "brand": "MSI",
     "model": "AF83",
@@ -58,7 +58,7 @@
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-006-TEH": {
+  "AEI-IT-008-TEH": {
     "name": "کامپیوتر",
     "brand": "MSI",
     "model": "AF83",
@@ -66,7 +66,7 @@
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-007-TEH": {
+  "AEI-IT-009-TEH": {
     "name": "کامپیوتر",
     "brand": "ASUS",
     "model": "PA278QV",
@@ -74,7 +74,7 @@
     "currentOwner": "مدیر عامل",
     "status": "فعال"
   },
-  "AEI-IT-008-TEH": {
+  "AEI-IT-010-TEH": {
     "name": "کامپیوتر",
     "brand": "MSI",
     "model": "AF83",
@@ -82,19 +82,19 @@
     "currentOwner": "مسئول تدارکات",
     "status": "فعال"
   },
-  "AEI-ACC-003-TEH": {
+  "AEI-IT-O11-TEH": {
     "name": "هولدر لپ تاپ",
     "location": "مالی",
     "currentOwner": "مدیر مالی",
     "status": "فعال"
   },
-  "AEI-ACC-004-TEH": {
+  "AEI-IT-012-TEH": {
     "name": "ماوس",
     "location": "مالی",
     "currentOwner": "مدیر مالی",
     "status": "فعال"
   },
-  "AEI-IT-009-TEH": {
+  "AEI-IT-013-TEH": {
     "name": "لپ تاپ",
     "brand": "HP",
     "model": "HSN113C4",
@@ -102,7 +102,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-IT-010-TEH": {
+  "AEI-IT-014-TEH": {
     "name": "لپ تاپ",
     "brand": "HP",
     "model": "HSNQ28C4",
@@ -110,21 +110,21 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-005-TEH": {
+  "AEI-IT-015-TEH": {
     "name": "آداپتور شارژ لپ تاپ HP",
     "brand": "HP",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-006-TEH": {
+  "AEI-IT-016-TEH": {
     "name": "آداپتور شارژ لپ تاپ HP",
     "brand": "HP",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-007-TEH": {
+  "AEI-IT-017-TEH": {
     "name": "آداپتور شارژ لپ تاپ HP",
     "brand": "HP",
     "model": "TPN DA15",
@@ -132,13 +132,13 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-008-TEH": {
+  "AEI-IT-018-TEH": {
     "name": "کابل برق-آداپتور",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-009-TEH": {
+  "AEI-IT-019-TEH": {
     "name": "ماوس",
     "brand": "LOGI TECH",
     "model": "M275",
@@ -146,25 +146,25 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-010-TEH": {
+  "AEI-IT-020-TEH": {
     "name": "کیف لپ تاپ",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-011-TEH": {
+  "AEI-IT-021-TEH": {
     "name": "کیف لپ تاپ",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-012-TEH": {
+  "AEI-IT-022-TEH": {
     "name": "ماوس",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-013-TEH": {
+  "AEI-IT-023-TEH": {
     "name": "ماوس",
     "brand": "MSI",
     "model": "MA04",
@@ -172,21 +172,21 @@
     "currentOwner": "مسئول حسابداری",
     "status": "فعال"
   },
-  "AEI-ACC-014-TEH": {
+  "AEI-IT-024-TEH": {
     "name": "ماوس",
     "brand": "MSI",
     "location": "واحد اداری",
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-011-TEH": {
+  "AEI-IT-025-TEH": {
     "name": "کیس",
     "brand": "ASUS",
     "location": "فنی",
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-ACC-015-TEH": {
+  "AEI-IT-026-TEH": {
     "name": "ماوس",
     "brand": "IGLOO",
     "model": "FL-20B",
@@ -212,7 +212,7 @@
     "currentOwner": "مسئول تدارکات",
     "status": "فعال"
   },
-  "AEI-ACC-016-TEH": {
+  "AEI-IT-026-TEH": {
     "name": "ماوس",
     "brand": "MSI",
     "model": "MA04",
@@ -220,7 +220,7 @@
     "currentOwner": "مسئول تدارکات",
     "status": "فعال"
   },
-  "AEI-ACC-017-TEH": {
+  "AEI-IT-027-TEH": {
     "name": "داکینگ استیشن",
     "brand": "HP",
     "model": "D9Y19AV",
@@ -228,7 +228,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-018-TEH": {
+  "AEI-IT-028-TEH": {
     "name": "کیبورد",
     "brand": "LOGI TECH",
     "model": "K345",
@@ -236,41 +236,41 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-019-TEH": {
+  "AEI-IT-029-TEH": {
     "name": "کیبورد",
     "brand": "MSI",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-020-TEH": {
+  "AEI-IT-030-TEH": {
     "name": "کیبورد",
     "brand": "LOGI TECH",
     "location": "مالی",
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-021-TEH": {
+  "AEI-IT-031-TEH": {
     "name": "کیبورد",
     "brand": "MSI",
     "location": "مالی",
     "currentOwner": "مسئول حسابداری",
     "status": "فعال"
   },
-  "AEI-ACC-022-TEH": {
+  "AEI-IT-032-TEH": {
     "name": "ماوس پد",
     "location": "بخش تدارکات",
     "currentOwner": "مسئول تدارکات",
     "status": "فعال"
   },
-  "AEI-ACC-023-TEH": {
+  "AEI-IT-033-TEH": {
     "name": "کیبورد",
     "brand": "RF1430",
     "location": "بخش تدارکات",
     "currentOwner": "مسئول تدارکات",
     "status": "فعال"
   },
-  "AEI-ACC-024-TEH": {
+  "AEI-IT-034-TEH": {
     "name": "ماوس",
     "brand": "LOGITECH",
     "model": "M220",
@@ -278,7 +278,7 @@
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-ACC-025-TEH": {
+  "AEI-IT-035-TEH": {
     "name": "ماوس",
     "brand": "MSI",
     "model": "MA04",
@@ -292,35 +292,35 @@
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-ACC-026-TEH": {
+  "AEI-IT-036-TEH": {
     "name": "کیبورد",
     "brand": "MSI",
     "location": "واحد اداری",
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-ACC-027-TEH": {
+  "AEI-IT-037-TEH": {
     "name": "کیبورد",
     "brand": "LOGI TECH",
     "location": "واحد مدیریت",
     "currentOwner": "مدیر عامل",
     "status": "فعال"
   },
-  "AEI-IT-012-TEH": {
+  "AEI-IT-038-TEH": {
     "name": "کامپیوتر",
     "brand": "MSI",
     "location": "مالی",
     "currentOwner": "مدیر مالی",
     "status": "فعال"
   },
-  "AEI-ACC-028-TEH": {
+  "AEI-IT-039-TEH": {
     "name": "ماوس",
     "brand": "LOGI TECH",
     "location": "مالی",
     "currentOwner": "مدیر مالی",
     "status": "فعال"
   },
-  "AEI-ACC-029-TEH": {
+  "AEI-IT-040-TEH": {
     "name": "کیبورد",
     "brand": "LOGI TECH",
     "location": "مالی",
@@ -339,7 +339,7 @@
     "currentOwner": "مدیر مالی",
     "status": "فعال"
   },
-  "AEI-ACC-030-TEH": {
+  "AEI-IT-041-TEH": {
     "name": "ماوس",
     "brand": "LOGI TECH",
     "location": "مالی",
@@ -412,7 +412,7 @@
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-ACC-031-TEH": {
+  "AEI-IT-041-TEH": {
     "name": "ماوس",
     "brand": "LOGI TECH",
     "location": "واحد مدیریت",
@@ -434,7 +434,7 @@
     "currentOwner": "مدیر عامل",
     "status": "فعال"
   },
-  "AEI-ACC-032-TEH": {
+  "AEI-IT-042-TEH": {
     "name": "پد زیر لپ تاب",
     "location": "واحد مدیریت",
     "currentOwner": "مدیر عامل",
@@ -873,7 +873,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-033-TEH": {
+  "AEI-IT-043-TEH": {
     "name": "فلش",
     "location": "مالی",
     "currentOwner": "حسابدار",
@@ -924,7 +924,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-IT-013-TEH": {
+  "AEI-IT-044-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "model": "M404DW",
@@ -932,7 +932,7 @@
     "currentOwner": "مسئول حسابداری",
     "status": "فعال"
   },
-  "AEI-IT-014-TEH": {
+  "AEI-IT-045-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "model": "7000 M712",
@@ -940,7 +940,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-IT-015-TEH": {
+  "AEI-IT-046-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "model": "CP 1025 COLOR",
@@ -948,7 +948,7 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-IT-016-TEH": {
+  "AEI-IT-047-TEH": {
     "name": "اسکنر",
     "brand": "HP",
     "model": "2500 F1",
@@ -956,13 +956,13 @@
     "currentOwner": "حسابدار",
     "status": "فعال"
   },
-  "AEI-ACC-034-TEH": {
+  "AEI-IT-048-TEH": {
     "name": "فلش",
     "location": "واحد اداری",
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-017-TEH": {
+  "AEI-IT-049-TEH": {
     "name": "دستگاه کپی",
     "brand": "SHARP",
     "model": "AR-M236",
@@ -970,7 +970,7 @@
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-018-TEH": {
+  "AEI-IT-050-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "model": "M428 FDW",
@@ -978,7 +978,7 @@
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-019-TEH": {
+  "AEI-IT-051-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "model": "M452 NW",
@@ -1004,7 +1004,7 @@
     "currentOwner": "مدیر مالی",
     "status": "فعال"
   },
-  "AEI-IT-020-TEH": {
+  "AEI-IT-052-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "location": "مالی",
@@ -1030,7 +1030,7 @@
     "currentOwner": "مدیر عامل",
     "status": "فعال"
   },
-  "AEI-IT-021-TEH": {
+  "AEI-IT-053-TEH": {
     "name": "دستگاه پرینتر",
     "brand": "HP",
     "model": "M255 DW",
@@ -1135,21 +1135,21 @@
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-IT-022-TEH": {
+  "AEI-IT-054-TEH": {
     "name": "کامپیوتر",
     "brand": "SAMSUNG",
     "location": "واحد اداری",
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-ACC-035-TEH": {
+  "AEI-IT-055-TEH": {
     "name": "کیبورد",
     "brand": "LOGI",
     "location": "واحد اداری",
     "currentOwner": "مسئول دفتر",
     "status": "فعال"
   },
-  "AEI-ACC-036-TEH": {
+  "AEI-IT-056-TEH": {
     "name": "ماوس",
     "brand": "LOGI",
     "location": "واحد اداری",
@@ -1479,7 +1479,7 @@
     "currentOwner": "کارشناس منابع انسانی",
     "status": "فعال"
   },
-  "AEI-ACC-037-TEH": {
+  "AEI-IT-057-TEH": {
     "name": "هدفون",
     "location": "فنی",
     "currentOwner": "کارشناس منابع انسانی",
@@ -1807,7 +1807,7 @@
     "location": "اتاق کنفرانس",
     "status": "فعال"
   },
-  "AEI-IT-023-TEH": {
+  "AEI-IT-058-TEH": {
     "name": "لپ تاپ",
     "brand": "ASUS",
     "model": "EXPERTBOOK-S4NXCV15Z71918A",
@@ -1815,7 +1815,7 @@
     "currentOwner": "آقای عبدهللا پور",
     "status": "فعال"
   },
-  "AEI-ACC-038-TEH": {
+  "AEI-IT-059-TEH": {
     "name": "ماوس",
     "brand": "RAPOO",
     "model": "0109M-01",
@@ -1823,7 +1823,7 @@
     "currentOwner": "آقای عبدهللا پور",
     "status": "فعال"
   }
-'AEI-IT-024-TEH': { 
+'AEI-IT-060-TEH': { 
    name: 'تلفن همراه',
     brand: 'SAMSUNG',
     model: 'Galaxy A11',
