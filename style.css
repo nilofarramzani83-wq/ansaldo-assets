@@ -446,3 +446,55 @@ body{
 .example-codes{
     justify-content:center !important;
 }
+
+/* ===== HOME PAGE ONLY ===== */
+
+.page-card{
+    max-width:460px !important;
+    width:100% !important;
+    margin:18px auto 0 !important;
+    padding:26px 24px !important;
+}
+
+.page-card h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.page-card p{
+    text-align:center;
+}
+
+
+.stats-box{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    margin:20px 0;
+}
+
+
+.stat{
+    flex:1;
+    min-width:0;
+    background:#FAFAFA;
+    border:1px solid #ECECEC;
+    border-radius:14px;
+    padding:12px 5px;
+}
+
+
+.stat span{
+    font-size:24px;
+}
+
+
+.page-card .btn{
+    display:flex;
+    width:100%;
+}
+
+
+.example-codes{
+    justify-content:center;
+}
