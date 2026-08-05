@@ -412,3 +412,37 @@ body{
     }
 
 }
+
+/* FORCE INDEX FIX */
+
+body{
+    align-items:center !important;
+}
+
+.page-card{
+    width:100% !important;
+    max-width:460px !important;
+    padding:26px 24px !important;
+    margin:0 auto !important;
+}
+
+.stats-box{
+    display:flex !important;
+    justify-content:center !important;
+    gap:12px !important;
+}
+
+.stat{
+    min-width:0 !important;
+    flex:1 !important;
+    padding:12px !important;
+}
+
+.btn{
+    width:100% !important;
+    margin-top:16px !important;
+}
+
+.example-codes{
+    justify-content:center !important;
+}
