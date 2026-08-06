@@ -1,1 +1,299 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اموال شرکت · ansaldoassets</title>
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="logo">
+    <span class="ansaldo">ansaldo</span>
+    <span class="divider"></span>
+    <span class="energia">energia</span>
+  </div>
+
+  <div class="page-card" id="view-branches">
+    <h1>اموال شرکت</h1>
+    <p>یک شعبه را انتخاب کنید.</p>
+    <div class="dept-grid">
+      <button class="dept-card" data-branch="تهران">دفتر مرکزی</button>
+      <button class="dept-card disabled" disabled>نوشهر<br><span class="soon">به‌زودی</span></button>
+      <button class="dept-card disabled" disabled>دالاهو<br><span class="soon">به‌زودی</span></button>
+      <button class="dept-card disabled" disabled>هریس<br><span class="soon">به‌زودی</span></button>
+    </div>
+  </div>
+
+  <div class="page-card" id="view-departments" style="display:none;">
+    <button class="back-link" id="back-to-branches">‹ بازگشت</button>
+    <h1>بخش‌های دفتر مرکزی</h1>
+    <p>یک بخش را انتخاب کنید، یا همه‌ی اموال را ببینید.</p>
+    <div class="dept-grid" id="dept-buttons"></div>
+  </div>
+
+  <div class="page-card" id="view-list" style="display:none;">
+    <button class="back-link" id="back-to-departments">‹ بازگشت</button>
+    <h1 id="list-title">اموال</h1>
+    <input id="list-search" type="text" placeholder="جستجو در نام یا کد..." autocomplete="off">
+    <div id="asset-list" class="asset-list"></div>
+  </div>
+
+  <div class="page-card" style="margin-top:16px;">
+    <h1>دانلود PDF مشخصات همه‌ی اموال</h1>
+    <p>یک فایل PDF شامل کارت مشخصات تمام اموالِ ثبت‌شده می‌سازد (هر صفحه، یک کالا).</p>
+    <button class="btn" type="button" id="pdf-generate">ساخت PDF</button>
+    <p id="pdf-status" style="margin-top:10px; font-size:12.5px;"></p>
+  </div>
+
+  <div id="pdf-render-zone" style="position:fixed; left:-9999px; top:0;"></div>
+
+<script>
+const DEPARTMENTS = [
+  { label: 'مالی', location: 'مالی' },
+  { label: 'مدیریت', location: 'واحد مدیریت' },
+  { label: 'تدارکات', location: 'بخش تدارکات' },
+  { label: 'فنی', location: 'فنی' },
+  { label: 'اتاق کنفرانس', location: 'اتاق کنفرانس' },
+  { label: 'اداری', location: 'واحد اداری' },
+  { label: 'آشپزخانه', location: 'آشپزخانه' },
+];
+
+let ALL_ASSETS = null;
+
+async function loadAssets() {
+  if (ALL_ASSETS) return ALL_ASSETS;
+  const res = await fetch('/assets.js');
+  const text = await res.text();
+  const blocks = [...text.matchAll(/'([A-Z0-9-]+-TEH)':\s*\{([\s\S]*?)\}/g)];
+  ALL_ASSETS = blocks.map(([, code, body]) => {
+    const get = (key) => {
+      const m = body.match(new RegExp(key + ":\\s*'([^']*)'"));
+      return m ? m[1] : '';
+    };
+    return {
+      code,
+      name: get('name'),
+      brand: get('brand'),
+      model: get('model'),
+      location: get('location'),
+      role: get('role'),
+      status: get('status'),
+    };
+  });
+  return ALL_ASSETS;
+}
+
+const viewBranches = document.getElementById('view-branches');
+const viewDepartments = document.getElementById('view-departments');
+const viewList = document.getElementById('view-list');
+const deptButtons = document.getElementById('dept-buttons');
+const assetListEl = document.getElementById('asset-list');
+const listTitle = document.getElementById('list-title');
+const listSearch = document.getElementById('list-search');
+
+function showView(view) {
+  [viewBranches, viewDepartments, viewList].forEach(v => v.style.display = 'none');
+  view.style.display = 'block';
+}
+
+document.querySelectorAll('.dept-card[data-branch="تهران"]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    await loadAssets();
+    renderDepartments();
+    showView(viewDepartments);
+  });
+});
+
+function renderDepartments() {
+  const presentLocations = new Set(ALL_ASSETS.map(a => a.location));
+  const known = new Set(DEPARTMENTS.map(d => d.location));
+  const extra = [...presentLocations].filter(l => !known.has(l));
+
+  deptButtons.innerHTML = '';
+
+  DEPARTMENTS.forEach(d => {
+    const count = ALL_ASSETS.filter(a => a.location === d.location).length;
+    const btn = document.createElement('button');
+    btn.className = 'dept-card';
+    btn.innerHTML = `${d.label}<br><span class="soon">${count} قلم</span>`;
+    btn.addEventListener('click', () => openList(d.label, a => a.location === d.location));
+    deptButtons.appendChild(btn);
+  });
+
+  if (extra.length) {
+    const count = ALL_ASSETS.filter(a => extra.includes(a.location)).length;
+    const btn = document.createElement('button');
+    btn.className = 'dept-card';
+    btn.innerHTML = `سایر<br><span class="soon">${count} قلم</span>`;
+    btn.addEventListener('click', () => openList('سایر', a => extra.includes(a.location)));
+    deptButtons.appendChild(btn);
+  }
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'dept-card all-card';
+  allBtn.innerHTML = `همه‌ی اموال<br><span class="soon">${ALL_ASSETS.length} قلم</span>`;
+  allBtn.addEventListener('click', () => openList('همه‌ی اموال', () => true));
+  deptButtons.appendChild(allBtn);
+}
+
+let currentFilter = () => true;
+
+function openList(title, filterFn) {
+  listTitle.textContent = title;
+  currentFilter = filterFn;
+  listSearch.value = '';
+  renderList();
+  showView(viewList);
+}
+
+function renderList() {
+  const q = listSearch.value.trim();
+  const items = ALL_ASSETS.filter(currentFilter).filter(a =>
+    !q || a.name.includes(q) || a.code.includes(q.toUpperCase()) || a.code.includes(q)
+  );
+
+  assetListEl.innerHTML = '';
+  if (!items.length) {
+    assetListEl.innerHTML = '<p style="color:#9B9B9B; font-size:13px;">چیزی پیدا نشد.</p>';
+    return;
+  }
+
+  items.forEach(a => {
+    const row = document.createElement('a');
+    row.className = 'asset-row';
+    row.href = `/qr/${encodeURIComponent(a.code)}`;
+    row.innerHTML = `
+      <span class="asset-row-name">${a.name}</span>
+      <span class="asset-row-code">${a.code}</span>
+    `;
+    assetListEl.appendChild(row);
+  });
+}
+
+listSearch.addEventListener('input', renderList);
+document.getElementById('back-to-branches').addEventListener('click', () => showView(viewBranches));
+document.getElementById('back-to-departments').addEventListener('click', () => showView(viewDepartments));
+
+document.querySelectorAll('.dept-card.disabled').forEach(btn => {
+  btn.addEventListener('click', () => alert('هنوز اموال این شعبه ثبت نشده است.'));
+});
+
+const pdfBtn = document.getElementById('pdf-generate');
+const pdfStatus = document.getElementById('pdf-status');
+const renderZone = document.getElementById('pdf-render-zone');
+
+function buildPlateHtml(asset) {
+  const rows = [];
+  rows.push(['نام کالا', asset.name]);
+  if (asset.brand) rows.push(['برند', asset.brand]);
+  if (asset.model) rows.push(['مدل', asset.model]);
+  rows.push(['بخش / محل استقرار', asset.location]);
+  if (asset.role) rows.push(['مسئول فعلی', asset.role]);
+  rows.push(['کد اموال', asset.code, 'code']);
+  if (asset.status) rows.push(['وضعیت', asset.status, 'status']);
+
+  const rowsHtml = rows.map(([label, value, cls]) => `
+    <div class="field-row">
+      <div class="field-value${cls ? ' ' + cls : ''}">${value}</div>
+      <div class="field-label">${label}</div>
+    </div>`).join('');
+
+  return `
+    <div class="logo">
+      <span class="ansaldo">ansaldo</span>
+      <span class="divider"></span>
+      <span class="energia">energia</span>
+    </div>
+    <div class="plate" style="width:460px;">
+      <div class="plate-title">
+        <h1>اطلاعات اموال</h1>
+        <p>مشخصات دارایی سازمانی</p>
+      </div>
+      <div class="code-pill-row">
+        <span class="code-pill">${asset.code}</span>
+      </div>
+      <div class="fields">${rowsHtml}</div>
+    </div>`;
+}
+
+pdfBtn.addEventListener('click', () => {
+  let pdfWindow = null;
+  try {
+    pdfWindow = window.open('', '_blank');
+  } catch (e) {
+    pdfWindow = null;
+  }
+  generatePdf(pdfWindow);
+});
+
+async function generatePdf(pdfWindow) {
+  pdfBtn.disabled = true;
+  pdfStatus.innerHTML = '';
+
+  try {
+    await loadAssets();
+
+    if (!ALL_ASSETS.length) {
+      pdfStatus.textContent = 'هیچ دارایی‌ای برای ساخت PDF پیدا نشد.';
+      if (pdfWindow) pdfWindow.close();
+      return;
+    }
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ unit: 'px', format: [520, 640] });
+
+    for (let i = 0; i < ALL_ASSETS.length; i++) {
+      const asset = ALL_ASSETS[i];
+      pdfStatus.textContent = `در حال ساخت ${i + 1} از ${ALL_ASSETS.length} (${asset.code})`;
+
+      renderZone.innerHTML = buildPlateHtml(asset);
+      renderZone.style.padding = '20px';
+      renderZone.style.background = '#F3F3F3';
+
+      await new Promise(r => setTimeout(r, 30));
+
+      const canvas = await html2canvas(renderZone, { scale: 1.5 });
+      const imgData = canvas.toDataURL('image/jpeg', 0.85);
+
+      if (i > 0) pdf.addPage([520, 640]);
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = (canvas.height / canvas.width) * pageWidth;
+      pdf.addImage(imgData, 'JPEG', 0, 0, pageWidth, pageHeight);
+
+      canvas.width = 0;
+      canvas.height = 0;
+    }
+
+    pdfStatus.textContent = 'در حال آماده‌سازی دانلود...';
+
+    const blob = pdf.output('blob');
+    const blobUrl = URL.createObjectURL(blob);
+
+    if (pdfWindow) {
+      pdfWindow.location.href = blobUrl;
+    } else {
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = 'ansaldoassets-catalog.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    pdfStatus.innerHTML =
+      `PDF شامل ${ALL_ASSETS.length} کالا ساخته شد. اگر دانلود خودکار شروع نشد،
+       <a href="${blobUrl}" download="ansaldoassets-catalog.pdf">اینجا کلیک کنید</a>.`;
+  } catch (err) {
+    pdfStatus.textContent = 'خطا در ساخت PDF. دوباره تلاش کنید.';
+    if (pdfWindow) pdfWindow.close();
+    console.error(err);
+  } finally {
+    pdfBtn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
 
