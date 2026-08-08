@@ -101,6 +101,9 @@ const homeSearchResults = document.getElementById('home-search-results');
 function showView(view) {
   [viewBranches, viewDepartments, viewList].forEach(v => v.style.display = 'none');
   view.style.display = 'block';
+  view.classList.remove('fade-in');
+  void view.offsetWidth;
+  view.classList.add('fade-in');
 }
 
 function renderAssetRow(container, a) {
@@ -140,6 +143,9 @@ async function runHomeSearch() {
   branchButtons.style.display = 'none';
   homeSearchResults.style.display = 'block';
   homeSearchResults.innerHTML = '';
+  homeSearchResults.classList.remove('fade-in');
+  void homeSearchResults.offsetWidth;
+  homeSearchResults.classList.add('fade-in');
 
   if (!items.length) {
     homeSearchResults.innerHTML = '<p style="color:#9B9B9B; font-size:13px;">چیزی پیدا نشد.</p>';
@@ -206,6 +212,10 @@ function renderList() {
   );
 
   assetListEl.innerHTML = '';
+  assetListEl.classList.remove('fade-in');
+  void assetListEl.offsetWidth;
+  assetListEl.classList.add('fade-in');
+
   if (!items.length) {
     assetListEl.innerHTML = '<p style="color:#9B9B9B; font-size:13px;">چیزی پیدا نشد.</p>';
     return;
