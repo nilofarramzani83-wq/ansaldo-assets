@@ -407,7 +407,7 @@ export const assets = {
     role: 'مدیر عامل',
     status: 'فعال'
   },
-  'AEI-APP-001-TEH': {
+  'AEI-IT-001-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -1749,4 +1749,88 @@ export const assets = {
     role: 'مسئول حسابداری',
     status: 'فعال'
 },
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مالی',
+    role: 'مدیر مالی',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مالی',
+    role: 'مدیر مالی',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مالی',
+    role: 'مدیر مالی',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مالی',
+    role: 'حسابدار',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مالی',
+    role: 'حسابدار',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'فنی',
+    role: 'منابع انسانی',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'اتاق کنفرانس',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'اتاق کنفرانس',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'اتاق کنفرانس',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+},
+  'AEI-FUR-064-TEH': {
+    name: 'پرده',
+    location: 'مدیریت',
+    role: 'مدیر عامل',
+    status: 'فعال'
+},
+  'AEI-ST-064-TEH': {
+    name: 'سطل',
+    location: 'سرویس بهداشتی',
+    status: 'فعال'
+},
+  'AEI-ST-064-TEH': {
+    name: 'سطل',
+    location: 'سرویس بهداشتی',
+    status: 'فعال'
+},
+  'AEI-ST-064-TEH': {
+    name: 'لوح تقدیر',
+    location: 'راهرو',
+    status: 'فعال'
+  },
 };
