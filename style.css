@@ -40,6 +40,14 @@ body{
     background-size: auto, 20px 20px;
     background-color: var(--light);
     background-attachment: fixed;
+    opacity: 1;
+    transition: opacity .18s ease;
+}
+body.page-transition{
+    opacity: 0;
+}
+@media (prefers-reduced-motion: reduce){
+    body{ transition: none; }
 }
 
 
@@ -215,6 +223,13 @@ body{
 
 }
 
+.btn{
+    transition: transform .1s ease, background .15s ease;
+}
+.btn:active{
+    transform: scale(.97);
+}
+
 .btn:disabled{
 
     opacity:.6;
@@ -322,6 +337,8 @@ body{
 .field-row{
 
     display:flex;
+
+    flex-direction: row-reverse;
 
     justify-content:space-between;
 
