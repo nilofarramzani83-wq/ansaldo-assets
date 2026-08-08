@@ -1824,11 +1824,11 @@
     "status": "فعال"
  },
 "AEI-IT-060-TEH": { 
-   name: "تلفن همراه",
-    brand: "SAMSUNG",
-    model: "Galaxy A11",
-    location: "مالی",
-    role: "مسئول حسابداری",
-    status: "فعال"
+    "name": "تلفن همراه",
+    "brand": "SAMSUNG",
+    "model": "Galaxy A11",
+    "location": "مالی",
+    "role": "مسئول حسابداری",
+    "status": "فعال"
  },
 
