@@ -52,8 +52,8 @@ export const assets = {
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
-  'AEI-APP-001-TEH': {
-    name: 'دستگاه کارت زنی',
+  'AEI-IT-00-TEH': {
+    name: 'دستگاه کارت ساعت',
     location: 'واحد اداری',
     role: 'مسئول دفتر',
     status: 'فعال'
@@ -111,21 +111,21 @@ export const assets = {
     status: 'فعال'
   },
   'AEI-IT-015-TEH': {
-    name: 'آداپتور شارژ لپ تاپ HP',
+    name: 'آداپتور شارژ لپ تاپ',
     brand: 'HP',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-016-TEH': {
-    name: 'آداپتور شارژ لپ تاپ HP',
+    name: 'آداپتور شارژ لپ تاپ',
     brand: 'HP',
     location: 'مالی',
     role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-IT-017-TEH': {
-    name: 'آداپتور شارژ لپ تاپ HP',
+    name: 'آداپتور شارژ لپ تاپ',
     brand: 'HP',
     model: 'TPN DA15',
     location: 'مالی',
@@ -257,12 +257,6 @@ export const assets = {
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
-  'AEI-IT-033-TEH': {
-    name: 'ماوس پد',
-    location: 'بخش تدارکات',
-    role: 'مسئول تدارکات',
-    status: 'فعال'
-  },
   'AEI-IT-034-TEH': {
     name: 'کیبورد',
     brand: 'RF1430',
@@ -364,12 +358,6 @@ export const assets = {
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
-  'AEI-APP-002-TEH': {
-    name: 'کنترل کولر',
-    location: 'بخش تدارکات',
-    role: 'مسئول تدارکات',
-    status: 'فعال'
-  },
   'AEI-ST-007-TEH': {
     name: 'تابلو',
     location: 'بخش تدارکات',
@@ -419,7 +407,7 @@ export const assets = {
     role: 'مدیر عامل',
     status: 'فعال'
   },
-  'AEI-TEL-001-TEH': {
+  'AEI-APP-001-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -434,13 +422,7 @@ export const assets = {
     role: 'مدیر عامل',
     status: 'فعال'
   },
-  'AEI-IT-044-TEH': {
-    name: 'پد زیر لپ تاب',
-    location: 'واحد مدیریت',
-    role: 'مدیر عامل',
-    status: 'فعال'
-  },
-  'AEI-FUR-004-TEH': {
+  'AEI-ST-004-TEH': {
     name: 'قاب روی میز',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
@@ -520,7 +502,7 @@ export const assets = {
     status: 'فعال'
   },
   'AEI-FUR-005-TEH': {
-    name: 'گاوصندوق',
+    name: 'گاو صندوق',
     location: 'واحد مدیریت',
     role: 'مدیر عامل',
     status: 'فعال'
@@ -615,7 +597,7 @@ export const assets = {
     role: 'مدیر مالی',
     status: 'فعال'
   },
-  'AEI-TEL-002-TEH': {
+  'AEI-IT-002-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -623,7 +605,7 @@ export const assets = {
     role: 'مدیر مالی',
     status: 'فعال'
   },
-  'AEI-TEL-003-TEH': {
+  'AEI-IT-003-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -631,7 +613,7 @@ export const assets = {
     role: 'حسابدار',
     status: 'فعال'
   },
-  'AEI-TEL-004-TEH': {
+  'AEI-IT-004-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -639,7 +621,7 @@ export const assets = {
     role: 'مسئول حسابداری',
     status: 'فعال'
   },
-  'AEI-TEL-005-TEH': {
+  'AEI-IT-005-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -647,7 +629,7 @@ export const assets = {
     role: 'مسئول دفتر',
     status: 'فعال'
   },
-  'AEI-TEL-006-TEH': {
+  'AEI-IT-006-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -679,7 +661,7 @@ export const assets = {
     role: 'کارشناس منابع انسانی',
     status: 'فعال'
   },
-  'AEI-TEL-007-TEH': {
+  'AEI-IT-007-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -1195,12 +1177,6 @@ export const assets = {
     role: 'مسئول دفتر',
     status: 'فعال'
   },
-  'AEI-APP-008-TEH': {
-    name: 'کنترل کولر',
-    location: 'واحد اداری',
-    role: 'مسئول دفتر',
-    status: 'فعال'
-  },
   'AEI-APP-009-TEH': {
     name: 'کنترل ریموت چراغ',
     location: 'واحد اداری',
@@ -1267,20 +1243,8 @@ export const assets = {
     role: 'مدیر عامل',
     status: 'فعال'
   },
-  'AEI-APP-010-TEH': {
-    name: 'کنترل کولر',
-    location: 'مالی',
-    role: 'مدیر مالی',
-    status: 'فعال'
-  },
-  'AEI-APP-011-TEH': {
-    name: 'کنترل کولر',
-    location: 'مالی',
-    role: 'حسابدار',
-    status: 'فعال'
-  },
   'AEI-FUR-045-TEH': {
-    name: 'گاوصندوق',
+    name: 'گاو صندوق',
     location: 'مالی',
     role: 'مدیر مالی',
     status: 'فعال'
@@ -1321,7 +1285,7 @@ export const assets = {
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
-  'AEI-AV-001-TEH': {
+  'AEI-IT-001-TEH': {
     name: 'اسپیکر',
     location: 'اتاق کنفرانس',
     status: 'فعال'
@@ -1401,7 +1365,7 @@ export const assets = {
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
-  'AEI-TEL-009-TEH': {
+  'AEI-IT-009-TEH': {
     name: 'تلفن',
     brand: 'GRANDSTREAM',
     model: 'WP825',
@@ -1415,7 +1379,7 @@ export const assets = {
     role: 'مسئول تدارکات',
     status: 'فعال'
   },
-  'AEI-TEL-010-TEH': {
+  'AEI-IT-010-TEH': {
     name: 'دستگاه فکس',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
@@ -1432,12 +1396,6 @@ export const assets = {
     brand: 'XIAOMI',
     location: 'بخش تدارکات',
     role: 'مسئول تدارکات',
-    status: 'فعال'
-  },
-  'AEI-APP-014-TEH': {
-    name: 'کنترل کولر',
-    location: 'مالی',
-    role: 'مسئول حسابداری',
     status: 'فعال'
   },
   'AEI-APP-015-TEH': {
@@ -1508,14 +1466,14 @@ export const assets = {
     role: 'مدیر مالی',
     status: 'فعال'
   },
-  'AEI-AV-002-TEH': {
+  'AEI-IT-002-TEH': {
     name: 'TV',
     brand: 'SONY',
     model: 'XR-75X80L',
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
-  'AEI-AV-003-TEH': {
+  'AEI-IT-003-TEH': {
     name: 'TV',
     brand: 'SONY',
     model: 'KD-55X85L',
@@ -1523,7 +1481,7 @@ export const assets = {
     role: 'مدیر عامل',
     status: 'فعال'
   },
-  'AEI-AV-004-TEH': {
+  'AEI-IT-004-TEH': {
     name: 'رسیور ماهواره',
     brand: 'MEDIASTAR',
     model: 'MS-4030 PRO',
@@ -1541,13 +1499,6 @@ export const assets = {
     name: 'سطل',
     location: 'مالی',
     role: 'مدیر مالی',
-    status: 'فعال'
-  },
-  'AEI-APP-020-TEH': {
-    name: 'کنترل تصفیه هوا green',
-    brand: 'RELEASE',
-    location: 'مالی',
-    role: 'حسابدار',
     status: 'فعال'
   },
   'AEI-ST-085-TEH': {
@@ -1586,23 +1537,8 @@ export const assets = {
     role: 'خدمتگزار',
     status: 'فعال'
   },
-  'AEI-AV-005-TEH': {
-    name: 'کنترل TV',
-    location: 'اتاق کنفرانس',
-    status: 'فعال'
-  },
   'AEI-ST-091-TEH': {
     name: 'جا کارتی ویزیت',
-    location: 'اتاق کنفرانس',
-    status: 'فعال'
-  },
-  'AEI-APP-021-TEH': {
-    name: 'کنترل کولر',
-    location: 'اتاق کنفرانس',
-    status: 'فعال'
-  },
-  'AEI-APP-022-TEH': {
-    name: 'کنترل کولر',
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
@@ -1611,12 +1547,12 @@ export const assets = {
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
-  'AEI-AV-006-TEH': {
+  'AEI-IT-006-TEH': {
     name: 'آنتن',
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
-  'AEI-AV-007-TEH': {
+  'AEI-IT-007-TEH': {
     name: 'دوربین',
     location: 'اتاق کنفرانس',
     status: 'فعال'
@@ -1677,18 +1613,6 @@ export const assets = {
     location: 'اتاق کنفرانس',
     status: 'فعال'
   },
-  'AEI-APP-023-TEH': {
-    name: 'کنترل کولر',
-    location: 'واحد مدیریت',
-    role: 'مدیر عامل',
-    status: 'فعال'
-  },
-  'AEI-APP-024-TEH': {
-    name: 'کنترل کولر',
-    location: 'واحد مدیریت',
-    role: 'مدیر عامل',
-    status: 'فعال'
-  },
   'AEI-ST-103-TEH': {
     name: 'گلدان',
     location: 'واحد مدیریت',
@@ -1741,12 +1665,6 @@ export const assets = {
   },
   'AEI-APP-029-TEH': {
     name: 'آبچکان رومیزی',
-    location: 'آشپزخانه',
-    role: 'خدمتگزار',
-    status: 'فعال'
-  },
-  'AEI-APP-030-TEH': {
-    name: 'جا مایع',
     location: 'آشپزخانه',
     role: 'خدمتگزار',
     status: 'فعال'
