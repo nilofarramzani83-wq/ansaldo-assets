@@ -1,84 +1,128 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Ansaldo Assets</title>
-
 <link rel="stylesheet" href="/style.css">
-
 </head>
-
-
 <body>
-
 <div class="logo">
   <img src="/logo.png" alt="Ansaldo Energia">
 </div>
-
-
 <div class="page-card">
-
-
 <h1>سامانه مدیریت اموال شرکت</h1>
-
-
 <p>
 با اسکن QR Code هر وسیله، اطلاعات کامل همان دارایی نمایش داده می‌شود.
 </p>
 
+<input id="home-search" type="text" placeholder="جستجوی سریع در نام یا کد اموال..." autocomplete="off">
+<div id="home-search-results" class="asset-list" style="display:none;"></div>
 
+<div id="main-links">
 <a class="btn" href="/assets-list.html">
 اموال شرکت
 </a>
-
-
 <a class="btn" href="/qr-generator.html">
 ساخت QR Code جدید
 </a>
-
-
 <a class="btn" href="/qr-generator.html#download-all">
 دانلود ZIP همه QR Code ها
 </a>
-
-
 <a class="btn" href="/qr/AEI-IT-001-TEH">
 مشاهده نمونه دارایی
 </a>
-
-
-
 <p style="margin-top:25px;">
 نمونه کدها:
 </p>
-
-
 <div class="example-codes">
-
 <a href="/qr/AEI-IT-001-TEH">
 AEI-IT-001-TEH
 </a>
-
-
 <a href="/qr/AEI-FUR-041-TEH">
 AEI-FUR-041-TEH
 </a>
-
-
 <a href="/qr/AEI-APP-010-TEH">
 AEI-APP-010-TEH
 </a>
-
-
+</div>
+</div>
 </div>
 
+<script>
+let ALL_ASSETS = null;
 
-</div>
+async function loadAssets() {
+  if (ALL_ASSETS) return ALL_ASSETS;
+  const res = await fetch('/assets.js');
+  const text = await res.text();
+  const blocks = [...text.matchAll(/'([A-Z0-9-]+-TEH)':\s*\{([\s\S]*?)\}/g)];
+  ALL_ASSETS = blocks.map(([, code, body]) => {
+    const get = (key) => {
+      const m = body.match(new RegExp(key + ":\\s*'([^']*)'"));
+      return m ? m[1] : '';
+    };
+    return {
+      code,
+      name: get('name'),
+      brand: get('brand'),
+      model: get('model'),
+      location: get('location'),
+      role: get('role'),
+      status: get('status'),
+    };
+  });
+  return ALL_ASSETS;
+}
 
+const homeSearch = document.getElementById('home-search');
+const homeSearchResults = document.getElementById('home-search-results');
+const mainLinks = document.getElementById('main-links');
 
+function renderAssetRow(container, a) {
+  const row = document.createElement('a');
+  row.className = 'asset-row';
+  row.href = `/qr/${encodeURIComponent(a.code)}`;
+  row.innerHTML = `
+    <span class="asset-row-name">${a.name}</span>
+    <span class="asset-row-code">${a.code}</span>
+  `;
+  container.appendChild(row);
+}
+
+let homeSearchTimer = null;
+homeSearch.addEventListener('input', () => {
+  clearTimeout(homeSearchTimer);
+  homeSearchTimer = setTimeout(runHomeSearch, 120);
+});
+
+async function runHomeSearch() {
+  const q = homeSearch.value.trim();
+
+  if (!q) {
+    homeSearchResults.style.display = 'none';
+    homeSearchResults.innerHTML = '';
+    mainLinks.style.display = '';
+    return;
+  }
+
+  await loadAssets();
+
+  const items = ALL_ASSETS.filter(a =>
+    a.name.includes(q) || a.code.includes(q.toUpperCase()) || a.code.includes(q)
+  );
+
+  mainLinks.style.display = 'none';
+  homeSearchResults.style.display = 'block';
+  homeSearchResults.innerHTML = '';
+
+  if (!items.length) {
+    homeSearchResults.innerHTML = '<p style="color:#9B9B9B; font-size:13px;">چیزی پیدا نشد.</p>';
+    return;
+  }
+
+  items.slice(0, 40).forEach(a => renderAssetRow(homeSearchResults, a));
+}
+</script>
 </body>
 </html>
-
