@@ -10,7 +10,7 @@
 <div class="logo">
   <img src="/logo.png" alt="Ansaldo Energia">
 </div>
-<div class="page-card">
+<div class="page-card fade-in">
 <h1>سامانه مدیریت اموال شرکت</h1>
 <p>
 با اسکن QR Code هر وسیله، اطلاعات کامل همان دارایی نمایش داده می‌شود.
@@ -89,14 +89,23 @@ const homeSearch = document.getElementById('home-search');
 const homeSearchResults = document.getElementById('home-search-results');
 const mainLinks = document.getElementById('main-links');
 
-// --- Live stats strip ---
+// --- Live stats strip (count-up) ---
+function countUp(el, target, duration = 700) {
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(eased * target);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
 (async () => {
   await loadAssets();
-  document.getElementById('stat-total').textContent = ALL_ASSETS.length;
-  document.getElementById('stat-locations').textContent =
-    new Set(ALL_ASSETS.map(a => a.location)).size;
-  document.getElementById('stat-categories').textContent =
-    new Set(ALL_ASSETS.map(a => (a.code.match(/AEI-([A-Z]+)-/) || [,'?'])[1])).size;
+  countUp(document.getElementById('stat-total'), ALL_ASSETS.length);
+  countUp(document.getElementById('stat-locations'), new Set(ALL_ASSETS.map(a => a.location)).size);
+  countUp(document.getElementById('stat-categories'), new Set(ALL_ASSETS.map(a => (a.code.match(/AEI-([A-Z]+)-/) || [,'?'])[1])).size);
 })();
 
 function renderAssetRow(container, a) {
