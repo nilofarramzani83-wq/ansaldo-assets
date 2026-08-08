@@ -115,6 +115,9 @@ async function runHomeSearch() {
   mainLinks.style.display = 'none';
   homeSearchResults.style.display = 'block';
   homeSearchResults.innerHTML = '';
+  homeSearchResults.classList.remove('fade-in');
+  void homeSearchResults.offsetWidth;
+  homeSearchResults.classList.add('fade-in');
 
   if (!items.length) {
     homeSearchResults.innerHTML = '<p style="color:#9B9B9B; font-size:13px;">چیزی پیدا نشد.</p>';
