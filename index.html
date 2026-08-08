@@ -19,17 +19,27 @@
 <input id="home-search" type="text" placeholder="جستجوی سریع در نام یا کد اموال..." autocomplete="off">
 <div id="home-search-results" class="asset-list" style="display:none;"></div>
 
+<div class="stats-box" id="stats-box">
+  <div class="stat"><span id="stat-total">···</span><small>کل اموال</small></div>
+  <div class="stat"><span id="stat-locations">···</span><small>بخش</small></div>
+  <div class="stat"><span id="stat-categories">···</span><small>دسته‌بندی</small></div>
+</div>
+
 <div id="main-links">
 <a class="btn" href="/assets-list.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
 اموال شرکت
 </a>
-<a class="btn" href="/qr-generator.html">
+<a class="btn btn-secondary" href="/qr-generator.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM19 19h2v2h-2z"/></svg>
 ساخت QR Code جدید
 </a>
-<a class="btn" href="/qr-generator.html#download-all">
+<a class="btn btn-secondary" href="/qr-generator.html#download-all">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
 دانلود ZIP همه QR Code ها
 </a>
-<a class="btn" href="/qr/AEI-IT-001-TEH">
+<a class="btn btn-secondary" href="/qr/AEI-IT-001-TEH">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
 مشاهده نمونه دارایی
 </a>
 <p style="margin-top:25px;">
@@ -78,6 +88,16 @@ async function loadAssets() {
 const homeSearch = document.getElementById('home-search');
 const homeSearchResults = document.getElementById('home-search-results');
 const mainLinks = document.getElementById('main-links');
+
+// --- Live stats strip ---
+(async () => {
+  await loadAssets();
+  document.getElementById('stat-total').textContent = ALL_ASSETS.length;
+  document.getElementById('stat-locations').textContent =
+    new Set(ALL_ASSETS.map(a => a.location)).size;
+  document.getElementById('stat-categories').textContent =
+    new Set(ALL_ASSETS.map(a => (a.code.match(/AEI-([A-Z]+)-/) || [,'?'])[1])).size;
+})();
 
 function renderAssetRow(container, a) {
   const row = document.createElement('a');
