@@ -602,6 +602,7 @@ body{
     border-radius: 12px;
     font-family: 'Vazirmatn', sans-serif;
     font-size: 13.5px;
+    direction: rtl;
     background: var(--row);
     color: var(--ink);
     margin: 10px 0 14px;
