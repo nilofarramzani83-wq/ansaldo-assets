@@ -502,7 +502,87 @@ body.page-transition{
 .code-pill-row{
     display:flex;
     justify-content:flex-start;
+    align-items:center;
+    gap:8px;
     margin-bottom: 14px;
+}
+
+/* ---------- category colors (code-pill) ---------- */
+
+.code-pill.cat-IT{ background:#EAF1FE; color:#2F6FED; border-color:#C9DBFB; }
+.code-pill.cat-FUR{ background:#F5EDE3; color:#8B5E34; border-color:#E6D5BF; }
+.code-pill.cat-APP{ background:#E6F7F5; color:#0F8B8D; border-color:#BFEAE6; }
+.code-pill.cat-ST{ background:#F1EAFB; color:#6B46C1; border-color:#DDC9F6; }
+
+/* ---------- copy-code button ---------- */
+
+.copy-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    border-radius:10px;
+    border:1.5px solid var(--border);
+    background:#fff;
+    color:var(--gray);
+    cursor:pointer;
+    flex-shrink:0;
+    transition: background .15s ease, color .15s ease, border-color .15s ease, transform .1s ease;
+}
+.copy-btn:hover{
+    background:var(--red-tint);
+    color:var(--red);
+    border-color:var(--red-border);
+}
+.copy-btn:active{
+    transform: scale(.93);
+}
+.copy-btn svg{ width:16px; height:16px; }
+.copy-toast{
+    font-size:12px;
+    color:var(--green);
+    font-weight:700;
+    opacity:0;
+    transition: opacity .2s ease;
+}
+.copy-toast.show{ opacity:1; }
+
+/* ---------- custom scrollbar (asset-list) ---------- */
+
+.asset-list{
+    scrollbar-width: thin;
+    scrollbar-color: var(--red-border) transparent;
+}
+.asset-list::-webkit-scrollbar{ width:6px; }
+.asset-list::-webkit-scrollbar-track{ background:transparent; }
+.asset-list::-webkit-scrollbar-thumb{ background:var(--red-border); border-radius:999px; }
+.asset-list::-webkit-scrollbar-thumb:hover{ background:var(--red); }
+
+/* ---------- skeleton loading ---------- */
+
+.skeleton{
+    display:inline-block;
+    color:transparent !important;
+    background: linear-gradient(90deg, #ECECEC 25%, #F5F5F5 50%, #ECECEC 75%);
+    background-size: 200% 100%;
+    animation: skeleton-pulse 1.3s ease-in-out infinite;
+    border-radius:6px;
+}
+@keyframes skeleton-pulse{
+    0%{ background-position: 200% 0; }
+    100%{ background-position: -200% 0; }
+}
+@media (prefers-reduced-motion: reduce){
+    .skeleton{ animation:none; }
+}
+
+/* ---------- not-found icon ---------- */
+
+.nf-icon{
+    display:block;
+    margin: 0 auto 12px;
+    color: var(--gray);
 }
 
 /* ---------- footnote under the asset card ---------- */
