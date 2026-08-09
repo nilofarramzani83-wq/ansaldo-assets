@@ -31,6 +31,11 @@ function renderLogo() {
   </div>`;
 }
 
+function categoryClass(code) {
+  const m = code.match(/AEI-([A-Z]+)-/);
+  return m ? `cat-${m[1]}` : "";
+}
+
 function renderFound(code, asset) {
   const rows = [];
   rows.push(["نام کالا", asset.name]);
@@ -59,13 +64,43 @@ ${renderLogo()}
     <p>مشخصات دارایی سازمانی</p>
   </div>
   <div class="code-pill-row">
-    <span class="code-pill">${escapeHtml(code)}</span>
+    <span class="code-pill ${categoryClass(code)}">${escapeHtml(code)}</span>
+    <button class="copy-btn" id="copy-code-btn" type="button" aria-label="کپی کد">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+    </button>
+    <span class="copy-toast" id="copy-toast">کپی شد ✓</span>
   </div>
   <div class="fields">${rowsHtml}</div>
 </div>
 <p class="footnote">این صفحه به‌صورت خودکار برای کد <bdi>${escapeHtml(
     code
-  )}</bdi> نمایش داده شده است.</p>`;
+  )}</bdi> نمایش داده شده است.</p>
+<script>
+  var copyBtn = document.getElementById('copy-code-btn');
+  var copyToast = document.getElementById('copy-toast');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var text = ${JSON.stringify(code)};
+      var done = function () {
+        copyToast.classList.add('show');
+        setTimeout(function () { copyToast.classList.remove('show'); }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  }
+</script>`;
 
   return pageShell(body, `${asset.name} · ${code}`);
 }
@@ -75,6 +110,11 @@ function renderNotFound(code) {
 ${renderLogo()}
 <div class="plate not-found">
   <div class="plate-title">
+    <svg class="nf-icon" viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9.5 9a2.5 2.5 0 0 1 4.7-1.2c.5.9.3 1.6-.4 2.3-.7.6-1.3 1-1.3 2.4"/>
+      <circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/>
+    </svg>
     <h1>کد نامعتبر</h1>
     <p>این کد در فهرست اموال ثبت نشده</p>
   </div>
