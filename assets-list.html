@@ -176,9 +176,12 @@ async function runHomeSearch() {
 
 document.querySelectorAll('.dept-card[data-branch="تهران"]').forEach(btn => {
   btn.addEventListener('click', async () => {
+    deptButtons.innerHTML = Array.from({ length: 6 }).map(() =>
+      `<div class="dept-card skeleton" style="height:58px;"></div>`
+    ).join('');
+    showView(viewDepartments);
     await loadAssets();
     renderDepartments();
-    showView(viewDepartments);
   });
 });
 
@@ -188,6 +191,9 @@ function renderDepartments() {
   const extra = [...presentLocations].filter(l => !known.has(l));
 
   deptButtons.innerHTML = '';
+  deptButtons.classList.remove('fade-in');
+  void deptButtons.offsetWidth;
+  deptButtons.classList.add('fade-in');
 
   DEPARTMENTS.forEach(d => {
     const count = ALL_ASSETS.filter(a => a.location === d.location).length;
