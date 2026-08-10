@@ -57,10 +57,10 @@ body.page-transition{
 
 .logo{
     display:flex;
+    flex-direction: row-reverse;
     justify-content:center;
     margin-bottom:20px;
 }
-
 
 .logo img{
     width:280px;
@@ -782,10 +782,4 @@ body.page-transition{
     font-size: 11.5px;
     color: var(--gray);
     direction: ltr;
-}
-.logo{
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content:center;
-    margin-bottom:20px;
 }
