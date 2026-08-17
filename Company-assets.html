@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ansaldo Assets</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="logo">
+  <img src="/logo.png" alt="Ansaldo Energia">
+</div>
+<div class="page-card fade-in">
+<h1>سامانه مدیریت اموال شرکت</h1>
+<p>
+با اسکن QR Code هر وسیله، اطلاعات کامل همان دارایی نمایش داده می‌شود.
+</p>
+
+<input id="home-search" type="text" placeholder="جستجوی سریع در نام یا کد اموال..." autocomplete="off">
+<div id="home-search-results" class="asset-list" style="display:none;"></div>
+
+<div class="stats-box" id="stats-box">
+  <div class="stat"><span id="stat-total">···</span><small>کل اموال</small></div>
+  <div class="stat"><span id="stat-locations">···</span><small>بخش</small></div>
+  <div class="stat"><span id="stat-categories">···</span><small>دسته‌بندی</small></div>
+</div>
+
+<div id="main-links">
+<a class="btn" href="/assets-list.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+اموال شرکت
+</a>
+<a class="btn btn-secondary" href="/qr-generator.html">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM19 19h2v2h-2z"/></svg>
+ساخت QR Code جدید
+</a>
+<a class="btn btn-secondary" href="/qr-generator.html#download-all">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+دانلود ZIP همه QR Code ها
+</a>
+<a class="btn btn-secondary" href="/qr/AEI-IT-001-TEH">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+مشاهده نمونه دارایی
+</a>
+<p style="margin-top:25px;">
+نمونه کدها:
+</p>
+<div class="example-codes">
+<a href="/qr/AEI-IT-001-TEH">
+AEI-IT-001-TEH
+</a>
+<a href="/qr/AEI-FUR-041-TEH">
+AEI-FUR-041-TEH
+</a>
+<a href="/qr/AEI-APP-010-TEH">
+AEI-APP-010-TEH
+</a>
+</div>
+</div>
+</div>
+
+<script>
+// --- Smooth page transitions ---
+const REDUCE_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!REDUCE_MOTION) {
+  document.body.classList.add('page-transition');
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => document.body.classList.remove('page-transition'));
+  });
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || link.target === '_blank') return;
+    e.preventDefault();
+    document.body.classList.add('page-transition');
+    setTimeout(() => { window.location.href = href; }, 300);
+  });
+}
+
+let ALL_ASSETS = null;
+
+async function loadAssets() {
+  if (ALL_ASSETS) return ALL_ASSETS;
+  const res = await fetch('/assets.js');
+  const text = await res.text();
+  const blocks = [...text.matchAll(/'([A-Z0-9-]+-TEH)':\s*\{([\s\S]*?)\}/g)];
+  ALL_ASSETS = blocks.map(([, code, body]) => {
+    const get = (key) => {
+      const m = body.match(new RegExp(key + ":\\s*'([^']*)'"));
+      return m ? m[1] : '';
+    };
+    return {
+      code,
+      name: get('name'),
+      brand: get('brand'),
+      model: get('model'),
+      location: get('location'),
+      role: get('role'),
+      status: get('status'),
+    };
+  });
+  return ALL_ASSETS;
+}
+
+const homeSearch = document.getElementById('home-search');
+const homeSearchResults = document.getElementById('home-search-results');
+const mainLinks = document.getElementById('main-links');
+
+// --- Live stats strip (count-up) ---
+function countUp(el, target, duration = 700) {
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(eased * target);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+(async () => {
+  await loadAssets();
+  document.getElementById('stat-total').classList.remove('skeleton');
+  document.getElementById('stat-locations').classList.remove('skeleton');
+  document.getElementById('stat-categories').classList.remove('skeleton');
+  countUp(document.getElementById('stat-total'), ALL_ASSETS.length);
+  countUp(document.getElementById('stat-locations'), new Set(ALL_ASSETS.map(a => a.location)).size);
+  countUp(document.getElementById('stat-categories'), new Set(ALL_ASSETS.map(a => (a.code.match(/AEI-([A-Z]+)-/) || [,'?'])[1])).size);
+})();
+
+function renderAssetRow(container, a) {
+  const row = document.createElement('a');
+  row.className = 'asset-row';
+  row.href = `/qr/${encodeURIComponent(a.code)}`;
+  row.innerHTML = `
+    <span class="asset-row-name">${a.name}</span>
+    <span class="asset-row-code">${a.code}</span>
+  `;
+  container.appendChild(row);
+}
+
+let homeSearchTimer = null;
+homeSearch.addEventListener('input', () => {
+  clearTimeout(homeSearchTimer);
+  homeSearchTimer = setTimeout(runHomeSearch, 120);
+});
+
+async function runHomeSearch() {
+  const q = homeSearch.value.trim();
+
+  if (!q) {
+    homeSearchResults.style.display = 'none';
+    homeSearchResults.innerHTML = '';
+    mainLinks.style.display = '';
+    return;
+  }
+
+  await loadAssets();
+
+  const items = ALL_ASSETS.filter(a =>
+    a.name.includes(q) || a.code.includes(q.toUpperCase()) || a.code.includes(q)
+  );
+
+  mainLinks.style.display = 'none';
+  homeSearchResults.style.display = 'block';
+  homeSearchResults.innerHTML = '';
+  homeSearchResults.classList.remove('fade-in');
+  void homeSearchResults.offsetWidth;
+  homeSearchResults.classList.add('fade-in');
+
+  if (!items.length) {
+    homeSearchResults.innerHTML = '<p style="color:#9B9B9B; font-size:13px;">چیزی پیدا نشد.</p>';
+    return;
+  }
+
+  items.slice(0, 40).forEach(a => renderAssetRow(homeSearchResults, a));
+}
+</script>
+</body>
+</html>
