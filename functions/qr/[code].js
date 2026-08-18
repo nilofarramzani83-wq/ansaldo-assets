@@ -1,5 +1,5 @@
 import { assets } from "../_data/assets.js";
-
+ 
 function escapeHtml(str) {
   return String(str)
     .replaceAll("&", "&amp;")
