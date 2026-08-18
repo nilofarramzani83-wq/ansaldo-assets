@@ -1,4 +1,4 @@
-export const assets = {
+export const assets = { 
   'AEI-IT-001-TEH': {
     name: 'لپ تاپ',
     brand: 'HP',
