@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const assetCode = params.get("code");
-
+ 
 fetch("asset-codes.json")
   .then(response => response.json())
   .then(data => {
