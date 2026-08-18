@@ -3,3 +3,4 @@ export async function onRequestPost() {
   headers.append("Set-Cookie", "pa_session=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0");
   return new Response(JSON.stringify({ ok: true }), { status: 200, headers });
 }
+ 
