@@ -1,7 +1,7 @@
 // ابزار مشترک برای ساخت و بررسی کوکی ورود (session).
 // از HMAC-SHA256 برای امضای امن استفاده می‌کند تا کاربر نتواند
 // کوکی جعلی بسازد، حتی اگر منبع سایت را ببیند.
-
+ 
 function toBase64Url(bytes) {
   let str = "";
   bytes.forEach((b) => (str += String.fromCharCode(b)));
